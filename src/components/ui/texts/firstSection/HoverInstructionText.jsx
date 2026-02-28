@@ -4,7 +4,7 @@ export const HoverInstructionText = forwardRef((props, ref) => {
     return (
         <div
             ref={ref}
-            className="absolute bottom-[10%] left-1/2 -translate-x-1/2 text-center w-[90%] md:w-[60%] flex flex-col items-center justify-center gap-4"
+            className="mt-8 text-center w-[90%] md:w-[60%] flex flex-col items-center justify-center gap-4 mx-auto"
         >
             <div className="flex items-center gap-3 bg-zinc-900/40 backdrop-blur-md px-6 py-3 rounded-full border border-white/10 shadow-2xl">
                 <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center animate-pulse">

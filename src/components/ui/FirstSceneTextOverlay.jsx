@@ -14,7 +14,6 @@ import { FirstSectionText8 } from './texts/firstSection/FirstSectionText8'
 import { FirstSectionText9 } from './texts/firstSection/FirstSectionText9'
 import { FirstSectionText10 } from './texts/firstSection/FirstSectionText10'
 import { FirstSectionText11 } from './texts/firstSection/FirstSectionText11'
-import { HoverInstructionText } from './texts/firstSection/HoverInstructionText'
 
 
 gsap.registerPlugin(ScrollTrigger)
@@ -32,7 +31,6 @@ export function FirstSceneTextOverlay() {
     const text9 = useRef()
     const text10 = useRef()
     const text11 = useRef()
-    const hoverText = useRef()
 
     useGSAP(() => {
         // Prikazuje ceo kontejner tek kada je GSAP spreman da izračuna pozicije tekstova
@@ -49,13 +47,6 @@ export function FirstSceneTextOverlay() {
 
         // 10 "sekundi" = 100% skrola
         timeline.to({}, { duration: 10 });
-
-        // Hover Instruction - Fades out entirely between 0% and 4% scroll
-        timeline.to(hoverText.current, {
-            opacity: 0,
-            y: 50,
-            duration: 0.4
-        }, 0);
 
         // Text 1 (Animira se od 0% do 6%)
         timeline.to(text1.current, {
@@ -189,7 +180,6 @@ export function FirstSceneTextOverlay() {
     return (
         <div ref={containerRef} className="fixed inset-0 pointer-events-none z-10 p-8 sm:p-20 overflow-hidden opacity-0 invisible">
 
-            <HoverInstructionText ref={hoverText} />
             <FirstSectionText1 ref={text1} />
             <FirstSectionText2 ref={text2} />
             <FirstSectionText3 ref={text3} />
