@@ -1,31 +1,11 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Header } from "@/components/ui/Header";
-import { HoverInstructionText } from "@/components/ui/texts/firstSection/HoverInstructionText";
 import "./home.css";
 
 export default function Home() {
-  const [opacity, setOpacity] = useState(1);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      // Fade out linearly as the user scrolls the first 300px
-      const fadeThreshold = 300;
-      const currentScroll = window.scrollY;
-
-      if (currentScroll < fadeThreshold) {
-        setOpacity(1 - currentScroll / fadeThreshold);
-      } else {
-        setOpacity(0);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
     <div className="home-wrapper">
@@ -43,10 +23,6 @@ export default function Home() {
               className="main-logo"
               aria-label="Gragabo Logo"
             ></object>
-
-            <div style={{ opacity, transition: 'opacity 0.1s ease-out', pointerEvents: opacity === 0 ? 'none' : 'auto' }}>
-              <HoverInstructionText />
-            </div>
           </div>
 
           <div className="scroll-indicator">
