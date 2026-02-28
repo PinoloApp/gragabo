@@ -26,7 +26,7 @@ export default function Home() {
           </div>
 
           <div className="scroll-indicator">
-            <div className="mouse"></div>
+            <p className="hover-text">Hover the dots</p>
           </div>
         </section>
 
