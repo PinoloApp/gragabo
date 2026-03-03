@@ -4,7 +4,7 @@ export const FirstSectionText10 = forwardRef((props, ref) => {
     return (
         <div
             ref={ref}
-            className="absolute top-[26%] right-8 md:right-24 -translate-y-1/2 max-w-sm text-left"
+            className="absolute top-[32%] right-8 md:right-24 -translate-y-1/2 max-w-sm text-left"
         >
             <h2 className="text-3xl md:text-5xl font-sans font-black text-black">
                 Phase Three: Implementation and Performance Support

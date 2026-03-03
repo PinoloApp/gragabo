@@ -184,22 +184,28 @@
     </a>
 </g>
 <g class="dot-wrapper">
-    <g class="levitate-group dot-2">
-        <rect x="333" y="112" width="34" height="34" rx="17" fill="#BEA05D" class="dot tutorial-dot-scale-1"/>
-        <text x="382" y="129" class="dot-label-right tutorial-text-fade-1">Finance, Legal &amp; Capital</text>
-    </g>
+    <a href="/financeScene" target="_top" style="cursor: pointer;">
+        <g class="levitate-group dot-2">
+            <rect x="333" y="112" width="34" height="34" rx="17" fill="#BEA05D" class="dot tutorial-dot-scale-1"/>
+            <text x="382" y="129" class="dot-label-right tutorial-text-fade-1">Finance, Legal &amp; Capital</text>
+        </g>
+    </a>
 </g>
 <g class="dot-wrapper">
-    <g class="levitate-group dot-3">
-        <rect x="302" y="197" width="34" height="34" rx="17" fill="#BEA05D" class="dot"/>
-        <text x="287" y="214" class="dot-label-left">Trade, Logistics &amp; Industrial Systems</text>
-    </g>
+    <a href="/tradeScene" target="_top" style="cursor: pointer;">
+        <g class="levitate-group dot-3">
+            <rect x="302" y="197" width="34" height="34" rx="17" fill="#BEA05D" class="dot"/>
+            <text x="287" y="214" class="dot-label-left">Trade, Logistics &amp; Industrial Systems</text>
+        </g>
+    </a>
 </g>
 <g class="dot-wrapper">
-    <g class="levitate-group dot-4">
-        <rect x="333" y="280" width="34" height="34" rx="17" fill="#BEA05D" class="dot tutorial-dot-scale-2"/>
-        <text x="318" y="297" class="dot-label-left tutorial-text-fade-2">Technology, Design &amp; Impact Services</text>
-    </g>
+    <a href="/technologyScene" target="_top" style="cursor: pointer;">
+        <g class="levitate-group dot-4">
+            <rect x="333" y="280" width="34" height="34" rx="17" fill="#BEA05D" class="dot tutorial-dot-scale-2"/>
+            <text x="318" y="297" class="dot-label-left tutorial-text-fade-2">Technology, Design &amp; Impact Services</text>
+        </g>
+    </a>
 </g>
 <g class="dot-wrapper">
     <g class="levitate-group dot-5">

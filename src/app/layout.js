@@ -1,12 +1,18 @@
-import { Courier_Prime } from "next/font/google";
+import { Courier_Prime, Outfit } from "next/font/google";
 import "./globals.css";
-import { MainCanvas } from "@/components/three/mainCanvas";
 import { SmoothScrolling } from "@/components/SmoothScrolling";
+import { Header } from "@/components/ui/Header";
 
 const courierPrime = Courier_Prime({
   variable: "--font-courier-prime",
   subsets: ["latin"],
   weight: ["400", "700"],
+});
+
+const outfit = Outfit({
+  variable: "--font-outfit",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata = {
@@ -18,12 +24,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${courierPrime.variable} antialiased max-w-[100vw] overflow-x-hidden`}
+        className={`${courierPrime.variable} ${outfit.variable} antialiased max-w-[100vw] overflow-x-hidden`}
       >
+        <Header />
         <SmoothScrolling>
           {children}
         </SmoothScrolling>
-        <MainCanvas />
       </body>
     </html>
   );

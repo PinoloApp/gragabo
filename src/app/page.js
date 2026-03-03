@@ -2,15 +2,12 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Header } from "@/components/ui/Header";
 import "./home.css";
 
 export default function Home() {
 
   return (
     <div className="home-wrapper">
-      <Header />
-
       <main>
         {/* Glavna sekcija sa celog ekrana */}
         <section id="home" className="hero">

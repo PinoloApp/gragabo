@@ -71,12 +71,12 @@ export function FirstSceneTextOverlay() {
         timeline.fromTo(text3.current,
             { opacity: 0, x: 100 },
             { opacity: 1, x: 0, duration: 0.2 },
-            1.1 // In od 11% do 13%
+            1.3 // In od 11% do 13%
         ).to(text3.current, {
             opacity: 0,
             y: -100,
             duration: 0.2
-        }, 1.6); // Out od 16% do 18%
+        }, 1.8); // Out od 16% do 18%
 
 
         // Text 4
@@ -106,8 +106,8 @@ export function FirstSceneTextOverlay() {
         // Text 6
         timeline.fromTo(text6.current,
             { opacity: 0, y: -150 },
-            { opacity: 1, y: 0, duration: 0.2 },
-            4.1 // In: 41% -> 43%
+            { opacity: 1, y: 0, duration: 0.3 },
+            4.2 // In: 41% -> 43%
         ).to(text6.current, {
             opacity: 0,
             y: -200,
@@ -155,18 +155,18 @@ export function FirstSceneTextOverlay() {
         timeline.fromTo(text10.current,
             { opacity: 0, x: 100 },
             { opacity: 1, x: 0, duration: 0.2 },
-            8.3 // In: 83% -> 85%
+            8.6 // In: 83% -> 85%
         ).to(text10.current, {
             opacity: 0,
             y: -100,
             duration: 0.2
-        }, 8.7); // Out: 87% -> 89%
+        }, 8.9); // Out: 87% -> 89%
 
 
         // Text 11
         timeline.fromTo(text11.current,
-            { opacity: 0, x: -100 },
-            { opacity: 1, x: 0, duration: 0.5 },
+            { autoAlpha: 0, x: -100 },
+            { autoAlpha: 1, x: 0, duration: 0.5 },
             9.1 // In: 91% -> 95%
         );
 
