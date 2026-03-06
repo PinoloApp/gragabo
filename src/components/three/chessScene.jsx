@@ -92,7 +92,7 @@ export function ChessScene() {
         // ============================================
         timeline.to(chess1Ref.current.position, {
             x: 0,
-            y: -5.4,
+            y: -7.4,
             z: 7,
             duration: 0.7,
         }, 4.1)

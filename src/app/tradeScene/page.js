@@ -1,5 +1,6 @@
 import { ThirdSceneTextOverlay } from "@/components/ui/ThirdSceneTextOverlay";
 import { TradeCanvas } from "@/components/three/tradeCanvas";
+import { Footer } from "@/components/ui/Footer";
 
 export default function TradeScenePage() {
     return (
@@ -9,6 +10,7 @@ export default function TradeScenePage() {
                 <ThirdSceneTextOverlay />
                 {/* Prazan prostor za GSAP scroll - on omogućava da animacije ispod i same scene rade na skrol */}
             </main>
+            <Footer />
         </>
     );
 }

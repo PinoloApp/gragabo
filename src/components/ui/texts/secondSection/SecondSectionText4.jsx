@@ -10,22 +10,17 @@ export const SecondSectionText4 = forwardRef((props, ref) => {
                 Our Integrated Financial and Legal Solutions
             </h2>
 
-            <p className="text-lg md:text-xl font-sans mt-4 text-zinc-700 italic">
-                Financial Performance and Risk Management
-                <br /><br />
-
-                We strengthen financial stability through:
-                <br /><br />
-
-                • Profitability and margin analysis<br />
-                • Cash flow forecasting and optimization<br />
-                • Cost structure restructuring<br />
-                • Financial reporting systems<br />
-                • Risk exposure assessment
-                <br /><br />
-
-                This ensures predictable financial performance and informed decision making.
-            </p>
+            <div className="mt-4">
+                    <p className="text-lg md:text-xl font-sans text-zinc-700 font-semibold">We strengthen financial stability through:</p>
+                    <ul className="mt-3 space-y-2 border-l-4 border-[#0A6B3B]/30 pl-4">
+                        <li className="flex items-start gap-3 text-lg md:text-xl font-sans text-zinc-600"><span className="w-2 h-2 rounded-full bg-[#0A6B3B] mt-2.5 shrink-0" />Profitability and margin analysis</li>
+                        <li className="flex items-start gap-3 text-lg md:text-xl font-sans text-zinc-600"><span className="w-2 h-2 rounded-full bg-[#0A6B3B] mt-2.5 shrink-0" />Cash flow forecasting and optimization</li>
+                        <li className="flex items-start gap-3 text-lg md:text-xl font-sans text-zinc-600"><span className="w-2 h-2 rounded-full bg-[#0A6B3B] mt-2.5 shrink-0" />Cost structure restructuring</li>
+                        <li className="flex items-start gap-3 text-lg md:text-xl font-sans text-zinc-600"><span className="w-2 h-2 rounded-full bg-[#0A6B3B] mt-2.5 shrink-0" />Financial reporting systems</li>
+                        <li className="flex items-start gap-3 text-lg md:text-xl font-sans text-zinc-600"><span className="w-2 h-2 rounded-full bg-[#0A6B3B] mt-2.5 shrink-0" />Risk exposure assessment</li>
+                    </ul>
+                    <p className="mt-4 text-sm md:text-base font-sans font-normal text-zinc-400 italic">This ensures predictable financial performance and informed decision making.</p>
+                </div>
         </div>
     );
 });

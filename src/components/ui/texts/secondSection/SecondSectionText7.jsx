@@ -10,7 +10,7 @@ export const SecondSectionText7 = forwardRef((props, ref) => {
                 Professional Experience and Case Evidence
             </h2>
 
-            <p className="text-lg md:text-xl font-sans mt-4 text-zinc-300 italic">
+            <p className="text-lg md:text-xl font-sans mt-4 text-zinc-300 leading-relaxed border-t-2 border-[#0A6B3B]/20 pt-4">
                 Gragabo has supported regulated production businesses and international operations in establishing compliant financial systems, robust legal structures, and effective capital management frameworks.
                 <br /><br />
 

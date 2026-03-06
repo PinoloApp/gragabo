@@ -10,20 +10,18 @@ export const FourthSectionText5 = forwardRef((props, ref) => {
                 Digital Infrastructure and Technology Systems
             </h2>
 
-            <p className="text-lg md:text-xl font-sans mt-4 text-zinc-700 italic">
-                We design and implement scalable digital environments through:
-                <br /><br />
-
-                • Business process automation<br />
-                • Enterprise information systems integration<br />
-                • Data management and analytics frameworks<br />
-                • Cloud and platform optimization<br />
-                • Cybersecurity and access governance<br />
-                • Digital workflow standardization
-                <br /><br />
-
-                Our objective is to create secure, efficient, and interoperable technological ecosystems.
-            </p>
+            <div className="mt-4">
+                    <p className="text-lg md:text-xl font-sans text-zinc-700 font-semibold">We design and implement scalable digital environments through:</p>
+                    <ul className="mt-3 space-y-2 border-l-4 border-[#0A6B3B]/30 pl-4">
+                        <li className="flex items-start gap-3 text-lg md:text-xl font-sans text-zinc-600"><span className="w-2 h-2 rounded-full bg-[#0A6B3B] mt-2.5 shrink-0" />Business process automation</li>
+                        <li className="flex items-start gap-3 text-lg md:text-xl font-sans text-zinc-600"><span className="w-2 h-2 rounded-full bg-[#0A6B3B] mt-2.5 shrink-0" />Enterprise information systems integration</li>
+                        <li className="flex items-start gap-3 text-lg md:text-xl font-sans text-zinc-600"><span className="w-2 h-2 rounded-full bg-[#0A6B3B] mt-2.5 shrink-0" />Data management and analytics frameworks</li>
+                        <li className="flex items-start gap-3 text-lg md:text-xl font-sans text-zinc-600"><span className="w-2 h-2 rounded-full bg-[#0A6B3B] mt-2.5 shrink-0" />Cloud and platform optimization</li>
+                        <li className="flex items-start gap-3 text-lg md:text-xl font-sans text-zinc-600"><span className="w-2 h-2 rounded-full bg-[#0A6B3B] mt-2.5 shrink-0" />Cybersecurity and access governance</li>
+                        <li className="flex items-start gap-3 text-lg md:text-xl font-sans text-zinc-600"><span className="w-2 h-2 rounded-full bg-[#0A6B3B] mt-2.5 shrink-0" />Digital workflow standardization</li>
+                    </ul>
+                    <p className="mt-4 text-sm md:text-base font-sans font-normal text-zinc-400 italic">Our objective is to create secure, efficient, and interoperable technological ecosystems.</p>
+                </div>
         </div>
     );
 });

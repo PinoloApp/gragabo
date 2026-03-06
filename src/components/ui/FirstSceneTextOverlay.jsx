@@ -178,7 +178,7 @@ export function FirstSceneTextOverlay() {
     }, [])
 
     return (
-        <div ref={containerRef} className="fixed inset-0 pointer-events-none z-10 p-8 sm:p-20 overflow-hidden opacity-0 invisible">
+        <div ref={containerRef} className="sticky top-0 h-screen w-full pointer-events-none z-10 p-8 sm:p-20 overflow-hidden opacity-0 invisible">
 
             <FirstSectionText1 ref={text1} />
             <FirstSectionText2 ref={text2} />

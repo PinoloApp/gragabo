@@ -10,20 +10,19 @@ export const SecondSectionText3 = forwardRef((props, ref) => {
                 Financial and Legal Risks We Mitigate
             </h2>
 
-            <p className="text-lg md:text-xl font-sans mt-4 text-zinc-700 italic">
-                Clients typically engage Gragabo when encountering:
-                <br /><br />
-
-                • Limited financial visibility and cash flow volatility<br />
-                • Inefficient cost and tax structures<br />
-                • Inadequate corporate and ownership models<br />
-                • Exposure to regulatory and contractual risk<br />
-                • Insufficient investor readiness<br />
-                • Weak capital allocation discipline<br />
-                • Cross-border compliance challenges
-                <br /><br />
-                These risks represent structural vulnerabilities that require systematic intervention.
-            </p>
+            <div className="mt-4">
+                    <p className="text-lg md:text-xl font-sans text-zinc-700 font-semibold">Clients typically engage Gragabo when encountering:</p>
+                    <ul className="mt-3 space-y-2 border-l-4 border-[#0A6B3B]/30 pl-4">
+                        <li className="flex items-start gap-3 text-lg md:text-xl font-sans text-zinc-600"><span className="w-2 h-2 rounded-full bg-[#0A6B3B] mt-2.5 shrink-0" />Limited financial visibility and cash flow volatility</li>
+                        <li className="flex items-start gap-3 text-lg md:text-xl font-sans text-zinc-600"><span className="w-2 h-2 rounded-full bg-[#0A6B3B] mt-2.5 shrink-0" />Inefficient cost and tax structures</li>
+                        <li className="flex items-start gap-3 text-lg md:text-xl font-sans text-zinc-600"><span className="w-2 h-2 rounded-full bg-[#0A6B3B] mt-2.5 shrink-0" />Inadequate corporate and ownership models</li>
+                        <li className="flex items-start gap-3 text-lg md:text-xl font-sans text-zinc-600"><span className="w-2 h-2 rounded-full bg-[#0A6B3B] mt-2.5 shrink-0" />Exposure to regulatory and contractual risk</li>
+                        <li className="flex items-start gap-3 text-lg md:text-xl font-sans text-zinc-600"><span className="w-2 h-2 rounded-full bg-[#0A6B3B] mt-2.5 shrink-0" />Insufficient investor readiness</li>
+                        <li className="flex items-start gap-3 text-lg md:text-xl font-sans text-zinc-600"><span className="w-2 h-2 rounded-full bg-[#0A6B3B] mt-2.5 shrink-0" />Weak capital allocation discipline</li>
+                        <li className="flex items-start gap-3 text-lg md:text-xl font-sans text-zinc-600"><span className="w-2 h-2 rounded-full bg-[#0A6B3B] mt-2.5 shrink-0" />Cross-border compliance challenges</li>
+                    </ul>
+                    <p className="mt-4 text-sm md:text-base font-sans font-normal text-zinc-400 italic">These risks represent structural vulnerabilities that require systematic intervention.</p>
+                </div>
         </div>
     );
 });

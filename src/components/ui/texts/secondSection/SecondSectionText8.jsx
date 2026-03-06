@@ -4,19 +4,13 @@ export const SecondSectionText8 = forwardRef((props, ref) => {
     return (
         <div
             ref={ref}
-            className="absolute top-[30%] left-[10%] text-left w-[30%]"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center w-[30%]"
         >
             <h2 className="text-3xl md:text-5xl font-sans font-black text-white">
-                Engagement Methodology
+                <span className="text-[#0A6B3B] font-normal text-xl block mb-2">Phase One:</span>Financial and Legal Diagnostics
             </h2>
 
-            <p className="text-lg md:text-xl font-sans mt-4 text-zinc-300 italic">
-                Our financial and legal advisory engagements follow a structured, transparent process.
-                <br /><br />
-
-                Phase One: Financial and Legal Diagnostics
-                <br /><br />
-
+            <p className="text-lg md:text-xl font-sans mt-4 text-zinc-400 font-medium">
                 Comprehensive analysis of financial performance, legal exposure, and capital structure.
             </p>
         </div>
@@ -24,4 +18,3 @@ export const SecondSectionText8 = forwardRef((props, ref) => {
 });
 
 SecondSectionText8.displayName = 'SecondSectionText8';
-

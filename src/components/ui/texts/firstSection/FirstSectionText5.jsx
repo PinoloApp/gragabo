@@ -10,19 +10,17 @@ export const FirstSectionText5 = forwardRef((props, ref) => {
                 Operational Excellence and Process Management
             </h2>
 
-            <p className="text-lg md:text-xl font-sans mt-4 text-zinc-700 italic">
-                We strengthen operational infrastructure by implementing:
-                <br /><br />
-
-                • End-to-end process optimization<br />
-                • Supply chain and logistics restructuring<br />
-                • Cost management systems<br />
-                • Quality and certification alignment<br />
-                • Performance monitoring frameworks
-                <br /><br />
-
-                The result is increased efficiency, transparency, and operational reliability.
-            </p>
+            <div className="mt-4">
+                <p className="text-lg md:text-xl font-sans text-zinc-700 font-semibold">We strengthen operational infrastructure by implementing:</p>
+                <ul className="mt-3 space-y-2 border-l-4 border-[#0A6B3B]/30 pl-4">
+                    <li className="flex items-start gap-3 text-lg md:text-xl font-sans text-zinc-600"><span className="w-2 h-2 rounded-full bg-[#0A6B3B] mt-2.5 shrink-0" />End-to-end process optimization</li>
+                    <li className="flex items-start gap-3 text-lg md:text-xl font-sans text-zinc-600"><span className="w-2 h-2 rounded-full bg-[#0A6B3B] mt-2.5 shrink-0" />Supply chain and logistics restructuring</li>
+                    <li className="flex items-start gap-3 text-lg md:text-xl font-sans text-zinc-600"><span className="w-2 h-2 rounded-full bg-[#0A6B3B] mt-2.5 shrink-0" />Cost management systems</li>
+                    <li className="flex items-start gap-3 text-lg md:text-xl font-sans text-zinc-600"><span className="w-2 h-2 rounded-full bg-[#0A6B3B] mt-2.5 shrink-0" />Quality and certification alignment</li>
+                    <li className="flex items-start gap-3 text-lg md:text-xl font-sans text-zinc-600"><span className="w-2 h-2 rounded-full bg-[#0A6B3B] mt-2.5 shrink-0" />Performance monitoring frameworks</li>
+                </ul>
+                <p className="mt-4 text-sm md:text-base font-sans font-normal text-zinc-400 italic">The result is increased efficiency, transparency, and operational reliability.</p>
+            </div>
         </div>
     );
 });

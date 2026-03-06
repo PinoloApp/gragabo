@@ -12,7 +12,7 @@ export function ScrollCanvas() {
                 dpr={[1, 2]}
                 camera={{ fov: 55, position: [0, 0, 20] }}
             >
-                <color attach="background" args={['#ffffff']} />
+                <color attach="background" args={['#f5f1e8']} />
                 <directionalLight
                     position={[10, 10, 1]}
                     intensity={10}

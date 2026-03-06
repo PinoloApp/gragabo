@@ -10,20 +10,18 @@ export const FourthSectionText6 = forwardRef((props, ref) => {
                 Strategic Design and Brand Architecture
             </h2>
 
-            <p className="text-lg md:text-xl font-sans mt-4 text-zinc-700 italic">
-                We strengthen organizational identity and market credibility through:
-                <br /><br />
-
-                • Corporate and brand identity systems<br />
-                • Digital and interface design<br />
-                • Communication and content frameworks<br />
-                • User experience optimization<br />
-                • Visual governance standards<br />
-                • Multi-platform consistency models
-                <br /><br />
-
-                Design is treated as a strategic asset rather than a cosmetic element.
-            </p>
+            <div className="mt-4">
+                    <p className="text-lg md:text-xl font-sans text-zinc-700 font-semibold">We strengthen organizational identity and market credibility through:</p>
+                    <ul className="mt-3 space-y-2 border-l-4 border-[#0A6B3B]/30 pl-4">
+                        <li className="flex items-start gap-3 text-lg md:text-xl font-sans text-zinc-600"><span className="w-2 h-2 rounded-full bg-[#0A6B3B] mt-2.5 shrink-0" />Corporate and brand identity systems</li>
+                        <li className="flex items-start gap-3 text-lg md:text-xl font-sans text-zinc-600"><span className="w-2 h-2 rounded-full bg-[#0A6B3B] mt-2.5 shrink-0" />Digital and interface design</li>
+                        <li className="flex items-start gap-3 text-lg md:text-xl font-sans text-zinc-600"><span className="w-2 h-2 rounded-full bg-[#0A6B3B] mt-2.5 shrink-0" />Communication and content frameworks</li>
+                        <li className="flex items-start gap-3 text-lg md:text-xl font-sans text-zinc-600"><span className="w-2 h-2 rounded-full bg-[#0A6B3B] mt-2.5 shrink-0" />User experience optimization</li>
+                        <li className="flex items-start gap-3 text-lg md:text-xl font-sans text-zinc-600"><span className="w-2 h-2 rounded-full bg-[#0A6B3B] mt-2.5 shrink-0" />Visual governance standards</li>
+                        <li className="flex items-start gap-3 text-lg md:text-xl font-sans text-zinc-600"><span className="w-2 h-2 rounded-full bg-[#0A6B3B] mt-2.5 shrink-0" />Multi-platform consistency models</li>
+                    </ul>
+                    <p className="mt-4 text-sm md:text-base font-sans font-normal text-zinc-400 italic">Design is treated as a strategic asset rather than a cosmetic element.</p>
+                </div>
         </div>
     );
 });

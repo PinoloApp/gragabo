@@ -9,7 +9,7 @@ export const ThirdSectionText2 = forwardRef((props, ref) => {
             <h2 className="text-3xl md:text-5xl font-sans font-bold text-zinc-800">
                 Executive Summary
             </h2>
-            <div className="text-lg md:text-xl font-sans mt-4 text-zinc-500 font-medium space-y-4">
+            <div className="text-lg md:text-xl font-sans mt-4 text-zinc-500 font-medium space-y-4 border-l-4 border-[#0A6B3B]/30 pl-5">
                 <p>
                     In global trade and industrial production, profitability is determined not only by product quality but by supply chain precision, contractual security, cost control, and operational discipline.
                 </p>

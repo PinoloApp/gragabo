@@ -10,22 +10,20 @@ export const ThirdSectionText3 = forwardRef((props, ref) => {
                 Structural Challenges in Trade and Industrial Operations
             </h2>
 
-            <p className="text-lg md:text-xl font-sans mt-4 text-zinc-700 italic">
-                Organizations engaged in international trade and production frequently encounter:
-                <br /><br />
-
-                • Inefficient supplier and distributor networks<br />
-                • Unclear cost allocation within logistics chains<br />
-                • Poor contract structuring in cross-border transactions<br />
-                • Weak inventory and demand forecasting<br />
-                • Limited visibility across supply chain operations<br />
-                • Exposure to regulatory and customs risks<br />
-                • Overdependence on individual intermediaries<br />
-                • Expansion into new markets without logistical readiness
-                <br /><br />
-
-                These issues are systemic and require structural intervention rather than temporary correction.
-            </p>
+            <div className="mt-4">
+                    <p className="text-lg md:text-xl font-sans text-zinc-700 font-semibold">Organizations engaged in international trade and production frequently encounter:</p>
+                    <ul className="mt-3 space-y-2 border-l-4 border-[#0A6B3B]/30 pl-4">
+                        <li className="flex items-start gap-3 text-lg md:text-xl font-sans text-zinc-600"><span className="w-2 h-2 rounded-full bg-[#0A6B3B] mt-2.5 shrink-0" />Inefficient supplier and distributor networks</li>
+                        <li className="flex items-start gap-3 text-lg md:text-xl font-sans text-zinc-600"><span className="w-2 h-2 rounded-full bg-[#0A6B3B] mt-2.5 shrink-0" />Unclear cost allocation within logistics chains</li>
+                        <li className="flex items-start gap-3 text-lg md:text-xl font-sans text-zinc-600"><span className="w-2 h-2 rounded-full bg-[#0A6B3B] mt-2.5 shrink-0" />Poor contract structuring in cross-border transactions</li>
+                        <li className="flex items-start gap-3 text-lg md:text-xl font-sans text-zinc-600"><span className="w-2 h-2 rounded-full bg-[#0A6B3B] mt-2.5 shrink-0" />Weak inventory and demand forecasting</li>
+                        <li className="flex items-start gap-3 text-lg md:text-xl font-sans text-zinc-600"><span className="w-2 h-2 rounded-full bg-[#0A6B3B] mt-2.5 shrink-0" />Limited visibility across supply chain operations</li>
+                        <li className="flex items-start gap-3 text-lg md:text-xl font-sans text-zinc-600"><span className="w-2 h-2 rounded-full bg-[#0A6B3B] mt-2.5 shrink-0" />Exposure to regulatory and customs risks</li>
+                        <li className="flex items-start gap-3 text-lg md:text-xl font-sans text-zinc-600"><span className="w-2 h-2 rounded-full bg-[#0A6B3B] mt-2.5 shrink-0" />Overdependence on individual intermediaries</li>
+                        <li className="flex items-start gap-3 text-lg md:text-xl font-sans text-zinc-600"><span className="w-2 h-2 rounded-full bg-[#0A6B3B] mt-2.5 shrink-0" />Expansion into new markets without logistical readiness</li>
+                    </ul>
+                    <p className="mt-4 text-sm md:text-base font-sans font-normal text-zinc-400 italic">These issues are systemic and require structural intervention rather than temporary correction.</p>
+                </div>
         </div>
     );
 });

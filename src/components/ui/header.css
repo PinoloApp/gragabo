@@ -9,7 +9,7 @@
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(0, 0, 0, 0.03);
     transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Courier Prime', monospace;
 }
 
 .header.scrolled {

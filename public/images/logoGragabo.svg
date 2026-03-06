@@ -34,7 +34,7 @@
 
 /* Stilovi za labele */
 .dot-label {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Courier Prime', monospace;
     font-size: 16px;
     font-weight: 600;
     fill: #333;
@@ -46,7 +46,7 @@
 
 /* Stilovi za labele sa desne strane */
 .dot-label-right {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Courier Prime', monospace;
     font-size: 16px;
     font-weight: 600;
     fill: #333;
@@ -64,7 +64,7 @@
 
 /* Stilovi za labele sa leve strane */
 .dot-label-left {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Courier Prime', monospace;
     font-size: 16px;
     font-weight: 600;
     fill: #333;
@@ -79,6 +79,25 @@
 .dot-wrapper:hover .dot-label-left {
     opacity: 1;
     transform: translateX(-12px);
+}
+
+/* Stilovi za labele iznad (srednja tačkica) */
+.dot-label-above {
+    font-family: 'Courier Prime', monospace;
+    font-size: 16px;
+    font-weight: 600;
+    fill: #333;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    pointer-events: none;
+    dominant-baseline: middle;
+    text-anchor: middle;
+}
+
+/* Prikazivanje labele iznad kada se hoveruje srednja tačkica */
+.dot-wrapper:hover .dot-label-above {
+    opacity: 1;
+    transform: translateY(-12px);
 }
 
 /* Edukativne animacije */
@@ -213,9 +232,12 @@
     </g>
 </g>
 <g class="dot-wrapper">
-    <g class="levitate-group dot-6">
-        <rect x="396" y="197" width="34" height="34" rx="17" fill="#BEA05D" class="dot"/>
-    </g>
+    <a href="/gragabo-network" target="_top" style="cursor: pointer;">
+        <g class="levitate-group dot-6">
+            <rect x="396" y="197" width="34" height="34" rx="17" fill="#BEA05D" class="dot"/>
+            <text x="413" y="183" class="dot-label-above">The Gragabo Network</text>
+        </g>
+    </a>
 </g>
 <g class="dot-wrapper">
     <g class="levitate-group dot-7">

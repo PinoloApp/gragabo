@@ -1,5 +1,6 @@
 import { FirstSceneTextOverlay } from "@/components/ui/FirstSceneTextOverlay";
 import { ChessCanvas } from "@/components/three/chessCanvas";
+import { Footer } from "@/components/ui/Footer";
 
 export default function MainScene() {
     return (
@@ -9,6 +10,7 @@ export default function MainScene() {
                 <FirstSceneTextOverlay />
                 {/* Prazan prostor za GSAP scroll - on omogućava da animacije ispod i same scene rade na skrol */}
             </main>
+            <Footer />
         </>
     );
 }

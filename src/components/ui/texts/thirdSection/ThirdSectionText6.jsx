@@ -10,21 +10,18 @@ export const ThirdSectionText6 = forwardRef((props, ref) => {
                 Supply Chain and Logistics Optimization
             </h2>
 
-            <p className="text-lg md:text-xl font-sans mt-4 text-zinc-700 italic">
-                We enhance logistics efficiency and cost control through:
-                <br /><br />
-
-                • End-to-end supply chain analysis<br />
-                • Transportation and warehousing optimization<br />
-                • Cost and margin leakage identification<br />
-                • Procurement restructuring<br />
-                • Inventory and demand planning frameworks<br />
-                • Operational performance monitoring systems
-                <br /><br />
-
-                The result is reduced cost volatility and improved delivery reliability.
-
-            </p>
+            <div className="mt-4">
+                    <p className="text-lg md:text-xl font-sans text-zinc-700 font-semibold">We enhance logistics efficiency and cost control through:</p>
+                    <ul className="mt-3 space-y-2 border-l-4 border-[#0A6B3B]/30 pl-4">
+                        <li className="flex items-start gap-3 text-lg md:text-xl font-sans text-zinc-600"><span className="w-2 h-2 rounded-full bg-[#0A6B3B] mt-2.5 shrink-0" />End-to-end supply chain analysis</li>
+                        <li className="flex items-start gap-3 text-lg md:text-xl font-sans text-zinc-600"><span className="w-2 h-2 rounded-full bg-[#0A6B3B] mt-2.5 shrink-0" />Transportation and warehousing optimization</li>
+                        <li className="flex items-start gap-3 text-lg md:text-xl font-sans text-zinc-600"><span className="w-2 h-2 rounded-full bg-[#0A6B3B] mt-2.5 shrink-0" />Cost and margin leakage identification</li>
+                        <li className="flex items-start gap-3 text-lg md:text-xl font-sans text-zinc-600"><span className="w-2 h-2 rounded-full bg-[#0A6B3B] mt-2.5 shrink-0" />Procurement restructuring</li>
+                        <li className="flex items-start gap-3 text-lg md:text-xl font-sans text-zinc-600"><span className="w-2 h-2 rounded-full bg-[#0A6B3B] mt-2.5 shrink-0" />Inventory and demand planning frameworks</li>
+                        <li className="flex items-start gap-3 text-lg md:text-xl font-sans text-zinc-600"><span className="w-2 h-2 rounded-full bg-[#0A6B3B] mt-2.5 shrink-0" />Operational performance monitoring systems</li>
+                    </ul>
+                    <p className="mt-4 text-sm md:text-base font-sans font-normal text-zinc-400 italic">The result is reduced cost volatility and improved delivery reliability.</p>
+                </div>
         </div>
     );
 });

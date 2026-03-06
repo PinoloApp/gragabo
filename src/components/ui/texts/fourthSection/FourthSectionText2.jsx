@@ -4,7 +4,7 @@ export const FourthSectionText2 = forwardRef((props, ref) => {
     return (
         <div
             ref={ref}
-            className="absolute top-[30%] left-1/2 -translate-x-1/2 -translate-y-1/2 text-center w-[50%]"
+            className="absolute top-[30%] left-1/2 -translate-x-1/2 -translate-y-1/2 text-center w-[80%]"
         >
             <h2 className="text-3xl md:text-5xl font-sans font-bold text-zinc-800">
                 Executive Summary

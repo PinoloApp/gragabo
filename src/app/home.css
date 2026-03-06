@@ -7,13 +7,11 @@
     --bg-white: #ffffff;
     --bg-light: #fdfdfd;
     --bg-dark: #121212;
-    --font-main: 'Outfit', sans-serif;
+    --font-main: 'Courier Prime', monospace;
     --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-html {
-    scroll-behavior: smooth;
-}
+
 
 .home-wrapper {
     font-family: var(--font-main);
@@ -198,103 +196,7 @@ html {
     margin: 0 auto;
 }
 
-/* Footer (Zeleni Premium izgled) */
-.home-wrapper .footer {
-    background-color: #0A6B3B;
-    color: var(--text-light);
-    padding: 100px 0 30px;
-}
 
-.home-wrapper .footer-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 50px;
-    margin-bottom: 70px;
-}
-
-.home-wrapper .footer-logo {
-    height: 54px;
-    width: auto;
-    margin-bottom: 20px;
-    display: block;
-}
-
-.home-wrapper .footer-brand p {
-    color: rgba(255, 255, 255, 0.9);
-    max-width: 320px;
-    line-height: 1.8;
-}
-
-.home-wrapper .footer-links h3,
-.home-wrapper .footer-social h3 {
-    margin-bottom: 24px;
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: #ffffff;
-    position: relative;
-    display: inline-block;
-}
-
-.home-wrapper .footer-links h3::after,
-.home-wrapper .footer-social h3::after {
-    content: '';
-    position: absolute;
-    bottom: -8px;
-    left: 0;
-    width: 40px;
-    height: 2px;
-    background-color: rgba(255, 255, 255, 0.5);
-}
-
-.home-wrapper .footer-links ul li {
-    margin-bottom: 14px;
-}
-
-.home-wrapper .footer-links ul li a {
-    color: rgba(255, 255, 255, 0.9);
-    transition: var(--transition);
-    display: inline-block;
-}
-
-.home-wrapper .footer-links ul li a:hover {
-    color: var(--bg-white);
-    transform: translateX(5px);
-}
-
-.home-wrapper .social-icons {
-    display: flex;
-    gap: 16px;
-}
-
-.home-wrapper .social-icons a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: var(--bg-white);
-    font-weight: 600;
-    font-size: 0.9rem;
-    transition: var(--transition);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.home-wrapper .social-icons a:hover {
-    background-color: var(--bg-white);
-    color: #0A6B3B;
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.home-wrapper .footer-bottom {
-    text-align: center;
-    padding-top: 30px;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 0.95rem;
-}
 
 @media (max-width: 768px) {
     .home-wrapper .placeholder-section h2 {

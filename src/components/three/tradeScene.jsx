@@ -15,7 +15,7 @@ export function TradeScene() {
     const idleRotationRef = useRef();
 
     // Initial position for the vast sea of containers
-    const initialPosition = [0, -10, -60];
+    const initialPosition = [0, -23, -32];
 
     useFrame((state, delta) => {
         // if (idleRotationRef.current) {
@@ -96,7 +96,7 @@ export function TradeScene() {
 
     return (
         <group ref={tradeRef} position={initialPosition} scale={1.5}>
-            <group ref={tradeRotationRef} rotation={[0, 0, 0]}>
+            <group ref={tradeRotationRef} rotation={[0, -21, 0]}>
                 <group ref={idleRotationRef}>
                     <Trade />
                 </group>

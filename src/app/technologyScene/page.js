@@ -1,5 +1,6 @@
 import { TechnologySceneTextOverlay } from "@/components/ui/TechnologySceneTextOverlay";
 import { TechnologyCanvas } from "@/components/three/technologyCanvas";
+import { Footer } from "@/components/ui/Footer";
 
 export default function TechnologyScenePage() {
     return (
@@ -9,6 +10,7 @@ export default function TechnologyScenePage() {
                 <TechnologySceneTextOverlay />
                 {/* Prazan prostor za GSAP scroll - on omogućava da animacije ispod i same scene rade na skrol */}
             </main>
+            <Footer />
         </>
     );
 }

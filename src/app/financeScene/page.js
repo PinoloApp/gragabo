@@ -1,5 +1,6 @@
 import { SecondSceneTextOverlay } from "@/components/ui/SecondSceneTextOverlay";
 import { ScrollCanvas } from "@/components/three/scrollCanvas";
+import { Footer } from "@/components/ui/Footer";
 
 export default function FinanceScene() {
     return (
@@ -9,6 +10,7 @@ export default function FinanceScene() {
                 <SecondSceneTextOverlay />
                 {/* Prazan prostor za GSAP scroll - on omogućava da animacije ispod i same scene rade na skrol */}
             </main>
+            <Footer />
         </>
     );
 }

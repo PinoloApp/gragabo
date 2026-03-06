@@ -51,10 +51,10 @@ export function Header() {
         <header className="header">
             <div className="container header-container">
                 <nav className="nav">
-                    <a href="/#home" onClick={(e) => { if (pathname !== '/') { e.preventDefault(); window.location.assign("/#home"); } }}>Početna</a>
-                    <a href="/#about" onClick={(e) => { if (pathname !== '/') { e.preventDefault(); window.location.assign("/#about"); } }}>O nama</a>
-                    <a href="/#services" onClick={(e) => { if (pathname !== '/') { e.preventDefault(); window.location.assign("/#services"); } }}>Usluge</a>
-                    <a href="/#contact" onClick={(e) => { if (pathname !== '/') { e.preventDefault(); window.location.assign("/#contact"); } }}>Kontakt</a>
+                    <a href="/#home" onClick={(e) => { if (pathname !== '/') { e.preventDefault(); window.location.assign("/#home"); } }}>Home</a>
+                    <a href="/about-us">About Us</a>
+                    <a href="/#services" onClick={(e) => { if (pathname !== '/') { e.preventDefault(); window.location.assign("/#services"); } }}>Services</a>
+                    <a href="/contact">Contact</a>
                 </nav>
             </div>
         </header>

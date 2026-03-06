@@ -10,25 +10,17 @@ export const FirstSectionText4 = forwardRef((props, ref) => {
                 Our Strategic and Operational Solutions
             </h2>
 
-            <p className="text-lg md:text-xl font-sans mt-4 text-zinc-700 italic">
-                Gragabo delivers integrated solutions across three core dimensions.
-                <br /><br />
-
-                Strategic Development and Market Positioning
-                <br /><br />
-
-                We assist clients in defining clear, data-driven growth strategies through:
-                <br /><br />
-
-                • Market and competitive analysis<br />
-                • Revenue model and pricing optimization<br />
-                • Portfolio and expansion planning<br />
-                • Export and internationalization readiness<br />
-                • Investment and development roadmaps
-                <br /><br />
-
-                Our strategic frameworks are designed for practical execution and measurable performance.
-            </p>
+            <div className="mt-4">
+                    <p className="text-lg md:text-xl font-sans text-zinc-700 font-semibold">We assist clients in defining clear, data-driven growth strategies through:</p>
+                    <ul className="mt-3 space-y-2 border-l-4 border-[#0A6B3B]/30 pl-4">
+                        <li className="flex items-start gap-3 text-lg md:text-xl font-sans text-zinc-600"><span className="w-2 h-2 rounded-full bg-[#0A6B3B] mt-2.5 shrink-0" />Market and competitive analysis</li>
+                        <li className="flex items-start gap-3 text-lg md:text-xl font-sans text-zinc-600"><span className="w-2 h-2 rounded-full bg-[#0A6B3B] mt-2.5 shrink-0" />Revenue model and pricing optimization</li>
+                        <li className="flex items-start gap-3 text-lg md:text-xl font-sans text-zinc-600"><span className="w-2 h-2 rounded-full bg-[#0A6B3B] mt-2.5 shrink-0" />Portfolio and expansion planning</li>
+                        <li className="flex items-start gap-3 text-lg md:text-xl font-sans text-zinc-600"><span className="w-2 h-2 rounded-full bg-[#0A6B3B] mt-2.5 shrink-0" />Export and internationalization readiness</li>
+                        <li className="flex items-start gap-3 text-lg md:text-xl font-sans text-zinc-600"><span className="w-2 h-2 rounded-full bg-[#0A6B3B] mt-2.5 shrink-0" />Investment and development roadmaps</li>
+                    </ul>
+                    <p className="mt-4 text-sm md:text-base font-sans font-normal text-zinc-400 italic">Our strategic frameworks are designed for practical execution and measurable performance.</p>
+                </div>
         </div>
     );
 });

@@ -10,7 +10,7 @@ export const ThirdSectionText4 = forwardRef((props, ref) => {
                 Our Integrated Solutions
             </h2>
 
-            <p className="text-lg md:text-xl font-sans mt-4 text-zinc-700 italic">
+            <p className="text-lg md:text-xl font-sans mt-4 text-zinc-600 leading-relaxed">
                 Gragabo delivers structured solutions across three core operational dimensions.
             </p>
         </div>
