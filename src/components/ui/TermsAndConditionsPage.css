@@ -1,0 +1,205 @@
+.tc-page {
+    font-family: 'Courier Prime', monospace;
+    background-color: #ffffff;
+    color: #1a1a1a;
+    overflow-x: hidden;
+    padding-top: 80px;
+}
+
+.tc-gold {
+    color: #CBA354;
+}
+
+/* ─── Hero ──────────────────────────────────────────────────────── */
+.tc-hero {
+    position: relative;
+    background: radial-gradient(ellipse 70% 60% at 50% 50%,
+            rgba(255, 255, 255, 0.4) 0%,
+            rgba(255, 255, 255, 0.9) 60%,
+            rgba(255, 255, 255, 1) 100%);
+    border-bottom: 1px solid rgba(203, 163, 84, 0.15);
+}
+
+.tc-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 120px 40px;
+    width: 100%;
+    text-align: left;
+}
+
+.tc-eyebrow {
+    font-size: 0.78rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: #CBA354;
+    margin-bottom: 24px;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+.tc-title .tc-gold {
+    color: inherit;
+}
+
+.tc-title {
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-weight: 300;
+    line-height: 1;
+    color: #0b0c0e;
+    margin-bottom: 28px;
+    letter-spacing: -0.04em;
+    max-width: 1000px;
+}
+
+.tc-subtitle {
+    font-size: clamp(1rem, 1.6vw, 1.2rem);
+    line-height: 1.75;
+    color: rgba(11, 12, 14, 0.7);
+    max-width: 620px;
+    margin: 0;
+}
+
+/* ─── Content sections — shared layout ─────────────────────────── */
+.tc-content-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 96px 40px;
+    border-top: 1px solid rgba(203, 163, 84, 0.08);
+}
+
+.tc-content-section:first-of-type {
+    border-top: none;
+}
+
+.tc-divider-label {
+    font-size: 1.5rem;
+    letter-spacing: -0.01em;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #0b0c0e;
+}
+
+.tc-content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 36px;
+    max-width: 800px;
+}
+
+.tc-content-body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tc-content-body p,
+.tc-content-body li {
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: rgba(11, 12, 14, 0.85);
+    margin: 0;
+}
+
+.tc-content-body ul {
+    list-style-type: none;
+    padding-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.tc-content-body ul li {
+    position: relative;
+    padding-left: 24px;
+}
+
+.tc-content-body ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #CBA354;
+}
+
+.tc-lead {
+    font-size: clamp(1.2rem, 2vw, 1.5rem) !important;
+    font-weight: 600;
+    color: #0b0c0e !important;
+    line-height: 1.4 !important;
+    letter-spacing: -0.01em;
+    margin-bottom: 10px;
+}
+
+.tc-subsection {
+    margin-top: 40px;
+}
+
+.tc-subsection-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #0b0c0e;
+    margin-bottom: 16px;
+    letter-spacing: 0.02em;
+}
+
+/* ─── Final ─────────────────────────────────────────────────────── */
+.tc-final-section {
+    border-top: 1px solid rgba(203, 163, 84, 0.15);
+    padding: 120px 40px;
+    text-align: center;
+    background: #fafaf9;
+}
+
+.tc-final-inner {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 52px;
+}
+
+.tc-final-line {
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    color: rgba(11, 12, 14, 0.75);
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+.tc-btn {
+    display: inline-block;
+    padding: 20px 56px;
+    border-radius: 0;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    font-family: 'Courier Prime', monospace;
+    color: rgba(11, 12, 14, 0.5);
+    border: 1px solid rgba(11, 12, 14, 0.15);
+}
+
+.tc-btn:hover {
+    color: #0b0c0e;
+    border-color: rgba(11, 12, 14, 0.4);
+    transform: translateX(10px);
+}
+
+@media (max-width: 768px) {
+
+    .tc-content-section,
+    .tc-final-section {
+        padding: 72px 24px;
+    }
+}

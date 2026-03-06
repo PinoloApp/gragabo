@@ -1,0 +1,272 @@
+[
+  {
+    "title": "",
+    "intro": [
+      "Cookie Policy",
+      "Last Updated: 25.02.2026",
+      "This Cookie Policy explains how Gragabo DOO Beograd (“Gragabo”, “we”, “us”, “our”) uses cookies and similar technologies on the website www.gragabo.com and in connection with its digital services.",
+      "This Policy is intended to provide transparent, comprehensive, and legally compliant information regarding the collection, storage, and use of cookies, in accordance with applicable Serbian, European Union, and international data protection and electronic communications laws."
+    ],
+    "subsections": []
+  },
+  {
+    "title": "1. Legal Framework and Regulatory Basis",
+    "intro": [
+      "This Cookie Policy is adopted and implemented in accordance with, inter alia:",
+      "The Law on Electronic Communications of the Republic of Serbia;",
+      "The Law on Electronic Commerce of the Republic of Serbia;",
+      "The Law on Personal Data Protection (Official Gazette RS No. 87/2018);",
+      "Regulation (EU) 2016/679 (General Data Protection Regulation - GDPR);",
+      "Directive 2002/58/EC (ePrivacy Directive), as amended;",
+      "Applicable guidance of supervisory authorities;",
+      "International data protection and privacy standards.",
+      "Where multiple legal regimes apply, this Policy is interpreted in a manner that ensures compliance with the highest applicable standard of protection."
+    ],
+    "subsections": []
+  },
+  {
+    "title": "2. Definition of Cookies and Similar Technologies",
+    "intro": [],
+    "subsections": [
+      {
+        "title": "2.1 Cookies",
+        "content": [
+          "Cookies are small text files that are stored on a user’s device (computer, tablet, smartphone) when visiting a website. They enable the website to recognise the user’s device and store certain information regarding browsing activities and preferences."
+        ]
+      },
+      {
+        "title": "2.2 Similar Technologies",
+        "content": [
+          "In addition to cookies, we may use similar technologies, including:",
+          "web beacons;",
+          "pixels;",
+          "tags;",
+          "local storage;",
+          "server-side identifiers.",
+          "For the purposes of this Policy, all such technologies are collectively referred to as “Cookies”."
+        ]
+      }
+    ]
+  },
+  {
+    "title": "3. Purposes of Cookie Use",
+    "intro": [
+      "Gragabo uses Cookies exclusively for legitimate, transparent, and proportionate purposes, including:",
+      "ensuring proper technical functioning of the website;",
+      "maintaining security and system integrity;",
+      "analysing website performance and usage patterns;",
+      "improving user experience;",
+      "managing preferences and settings;",
+      "supporting compliance obligations.",
+      "Cookies are not used for unlawful profiling, undisclosed tracking, or unauthorised commercial exploitation."
+    ],
+    "subsections": []
+  },
+  {
+    "title": "4. Categories of Cookies",
+    "intro": [
+      "We use the following categories of Cookies: 4.1 Strictly Necessary Cookies",
+      "These Cookies are essential for the operation of the website and cannot be disabled through consent management tools.",
+      "They enable core functions such as:",
+      "secure access;",
+      "navigation;",
+      "load balancing;",
+      "fraud prevention;",
+      "session management.",
+      "Legal Basis:",
+      "Processing is based on legitimate interest and technical necessity (GDPR Article 6(1)(f))."
+    ],
+    "subsections": [
+      {
+        "title": "4.2 Functional and Preference Cookies",
+        "content": [
+          "These Cookies enable the website to remember user choices and preferences, including:",
+          "language settings;",
+          "region selection;",
+          "display preferences.",
+          "They enhance usability but are not strictly essential.",
+          "Legal Basis:",
+          "User consent (GDPR Article 6(1)(a)) where required."
+        ]
+      },
+      {
+        "title": "4.3 Analytical and Performance Cookies",
+        "content": [
+          "These Cookies collect aggregated and statistical information regarding website usage, including:",
+          "page views;",
+          "navigation paths;",
+          "session duration;",
+          "error diagnostics.",
+          "Where used, analytics tools (e.g., Google Analytics) are configured in accordance with applicable data protection requirements, including IP anonymisation where feasible.",
+          "Legal Basis:",
+          "User consent (GDPR Article 6(1)(a))."
+        ]
+      },
+      {
+        "title": "4.4 Marketing and Tracking Cookies",
+        "content": [
+          "Where applicable, these Cookies may be used to:",
+          "measure campaign effectiveness;",
+          "analyse referral sources;",
+          "support targeted communication.",
+          "Gragabo does not engage in unauthorised behavioural advertising.",
+          "Marketing Cookies are used only where explicitly consented to by the user.",
+          "Legal Basis:",
+          "Explicit user consent (GDPR Article 6(1)(a))."
+        ]
+      }
+    ]
+  },
+  {
+    "title": "5. First-Party and Third-Party Cookies",
+    "intro": [],
+    "subsections": [
+      {
+        "title": "5.1 First-Party Cookies",
+        "content": [
+          "First-party Cookies are set and managed directly by Gragabo and are used primarily for technical and operational purposes."
+        ]
+      },
+      {
+        "title": "5.2 Third-Party Cookies",
+        "content": [
+          "Third-party Cookies may be set by external service providers supporting website functionality, analytics, or communications.",
+          "Such providers act as independent controllers or processors and are subject to contractual and legal obligations.",
+          "Gragabo does not control third-party Cookie policies.",
+          "Users are encouraged to review relevant third-party privacy policies."
+        ]
+      }
+    ]
+  },
+  {
+    "title": "6. Cookie Consent Management",
+    "intro": [],
+    "subsections": [
+      {
+        "title": "6.1 Consent Requirement",
+        "content": [
+          "Except for strictly necessary Cookies, all Cookies are deployed only after obtaining valid, informed, and unambiguous user consent.",
+          "Consent is collected through a dedicated cookie management interface upon first visit."
+        ]
+      },
+      {
+        "title": "6.2 Granular Choice",
+        "content": [
+          "Users are provided with the ability to:",
+          "accept all Cookies;",
+          "reject non-essential Cookies;",
+          "customise preferences by category.",
+          "Consent is not bundled and is freely given."
+        ]
+      },
+      {
+        "title": "6.3 Withdrawal of Consent",
+        "content": [
+          "Users may withdraw or modify their consent at any time through:",
+          "the cookie settings interface;",
+          "browser settings;",
+          "available preference tools.",
+          "Withdrawal does not affect the lawfulness of prior processing."
+        ]
+      }
+    ]
+  },
+  {
+    "title": "7. Cookie Retention Periods",
+    "intro": [
+      "Cookies are stored for periods consistent with their purpose and applicable law.",
+      "Depending on category, Cookies may be:",
+      "session-based (deleted upon browser closure);",
+      "persistent (retained for defined periods).",
+      "Retention periods are regularly reviewed.",
+      "No Cookie is retained longer than necessary."
+    ],
+    "subsections": []
+  },
+  {
+    "title": "8. International Data Transfers",
+    "intro": [
+      "Where Cookies involve data transfers outside Serbia or the EU/EEA, such transfers are conducted in accordance with:",
+      "GDPR Articles 44-49;",
+      "Serbian transfer provisions;",
+      "approved safeguards.",
+      "Relevant safeguards are described in the Privacy Policy."
+    ],
+    "subsections": []
+  },
+  {
+    "title": "9. Data Protection and Security Measures",
+    "intro": [
+      "Gragabo implements appropriate technical and organisational measures to protect Cookie-related data, including:",
+      "encrypted communications;",
+      "access controls;",
+      "infrastructure security;",
+      "contractual safeguards.",
+      "Absolute security cannot be guaranteed."
+    ],
+    "subsections": []
+  },
+  {
+    "title": "10. User Rights",
+    "intro": [
+      "Users retain all rights under applicable data protection law, including:",
+      "right of access;",
+      "right to rectification;",
+      "right to erasure;",
+      "right to restriction;",
+      "right to object;",
+      "right to lodge complaints.",
+      "Requests may be submitted to:",
+      "international@gragabo.com"
+    ],
+    "subsections": []
+  },
+  {
+    "title": "11. Browser Controls and Device Settings",
+    "intro": [
+      "Users may control Cookies through browser settings, including:",
+      "blocking Cookies;",
+      "deleting stored Cookies;",
+      "configuring notifications.",
+      "Disabling Cookies may affect website functionality."
+    ],
+    "subsections": []
+  },
+  {
+    "title": "12. No Automated Decision-Making",
+    "intro": [
+      "Cookies are not used for fully automated decision-making producing legal or similarly significant effects."
+    ],
+    "subsections": []
+  },
+  {
+    "title": "13. Policy Updates and Monitoring",
+    "intro": [
+      "This Cookie Policy is reviewed periodically to reflect:",
+      "legislative changes;",
+      "regulatory guidance;",
+      "technological developments;",
+      "operational evolution.",
+      "Material changes are published on the website."
+    ],
+    "subsections": []
+  },
+  {
+    "title": "14. Relationship with Privacy Policy",
+    "intro": [
+      "This Cookie Policy forms an integral part of Gragabo’s Privacy Framework and must be read in conjunction with the Privacy Policy.",
+      "In case of inconsistency, mandatory legal provisions prevail."
+    ],
+    "subsections": []
+  },
+  {
+    "title": "15. Contact Information",
+    "intro": [
+      "For all questions regarding Cookies and data protection:",
+      "Gragabo DOO Beograd",
+      "Email: international@gragabo.com",
+      "Website: www.gragabo.com"
+    ],
+    "subsections": []
+  }
+]

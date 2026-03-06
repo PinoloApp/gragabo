@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Outfit:wght@300;400;500&display=swap');
+
+.cp-page {
+    font-family: 'Courier Prime', monospace;
+    background-color: #ffffff;
+    color: #1a1a1a;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.cp-hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10%;
+    background: radial-gradient(ellipse 70% 60% at 50% 50%,
+            rgba(255, 255, 255, 0.4) 0%,
+            rgba(255, 255, 255, 0.9) 60%,
+            rgba(255, 255, 255, 1) 100%);
+    border-bottom: 1px solid rgba(203, 163, 84, 0.15);
+    z-index: 1;
+}
+
+.cp-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1000px;
+    width: 100%;
+    padding: 0;
+}
+
+.cp-eyebrow {
+    font-size: 0.78rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: #CBA354;
+    margin-bottom: 24px;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+.cp-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-weight: 300;
+    line-height: 1;
+    color: #0b0c0e;
+    letter-spacing: -0.04em;
+    max-width: 1000px;
+}
+
+.cp-info-line {
+    margin: 0;
+    padding: 14px 0;
+    font-size: 1.04rem;
+    line-height: 1.8;
+    color: rgba(11, 12, 14, 0.82);
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.cp-title + .cp-info-line {
+    padding-top: 8%;
+}
+
+.cp-info-line + .cp-info-line {
+    border-top: 1px solid rgba(203, 163, 84, 0.18);
+}
+
+.cp-info-label {
+    min-width: 250px;
+    flex-shrink: 0;
+    color: #0b0c0e;
+    font-weight: 700;
+}
+
+.cp-link {
+    color: #0b0c0e;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(203, 163, 84, 0.45);
+    transition: border-color 0.25s ease;
+}
+
+.cp-link:hover {
+    border-bottom-color: #CBA354;
+}
+
+@media (max-width: 900px) {
+    .cp-info-label {
+        min-width: 220px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cp-hero {
+        padding: 80px 6%;
+        justify-content: center;
+    }
+
+    .cp-info-line {
+        display: block;
+        padding: 12px 0;
+        font-size: 1rem;
+    }
+
+    .cp-info-label {
+        display: block;
+        min-width: 0;
+        margin-bottom: 4px;
+    }
+}
