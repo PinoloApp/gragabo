@@ -194,20 +194,22 @@ export function TechnologySceneTextOverlay() {
     }, [])
 
     return (
-        <div ref={containerRef} className="sticky top-0 h-screen w-full pointer-events-none z-10 p-8 sm:p-20 overflow-hidden opacity-0 invisible">
-            <FourthSectionText1 ref={text1} />
-            <FourthSectionText2 ref={text2} />
-            <FourthSectionText3 ref={text3} />
-            <FourthSectionText4 ref={text4} />
-            <FourthSectionText5 ref={text5} />
-            <FourthSectionText6 ref={text6} />
-            <FourthSectionText7 ref={text7} />
-            <FourthSectionText8 ref={text8} />
-            <FourthSectionText9 ref={text9} />
-            <FourthSectionText10 ref={text10} />
-            <FourthSectionText11 ref={text11} />
-            <FourthSectionText12 ref={text12} />
-            <FourthSectionText13 ref={text13} />
+        <div ref={containerRef} className="sticky top-0 h-screen w-full pointer-events-none z-10 overflow-hidden opacity-0 invisible">
+            <div className="scene-text-overlay relative h-full p-8 sm:p-20">
+                <FourthSectionText1 ref={text1} />
+                <FourthSectionText2 ref={text2} />
+                <FourthSectionText3 ref={text3} />
+                <FourthSectionText4 ref={text4} />
+                <FourthSectionText5 ref={text5} />
+                <FourthSectionText6 ref={text6} />
+                <FourthSectionText7 ref={text7} />
+                <FourthSectionText8 ref={text8} />
+                <FourthSectionText9 ref={text9} />
+                <FourthSectionText10 ref={text10} />
+                <FourthSectionText11 ref={text11} />
+                <FourthSectionText12 ref={text12} />
+                <FourthSectionText13 ref={text13} />
+            </div>
         </div>
     )
 }

@@ -7,10 +7,10 @@ export const FirstSectionText2 = forwardRef((props, ref) => {
                 ref={ref}
                 className="text-center w-[70%]"
             >
-                <h2 className="text-3xl md:text-5xl font-sans font-bold text-zinc-800">
+                <h2 className="text-2xl md:text-3xl font-sans font-bold text-zinc-800">
                     Executive Summary
                 </h2>
-                <div className="text-lg md:text-xl font-sans mt-4 text-zinc-500 font-medium space-y-4">
+                <div className="text-base md:text-lg font-sans mt-4 text-zinc-500 font-medium space-y-4">
                     <p>
                         Many growing companies encounter a critical turning point where increased revenue is no longer matched by organizational stability, operational efficiency, or management clarity.
                     </p>

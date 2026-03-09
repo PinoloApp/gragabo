@@ -6,10 +6,10 @@ export const FourthSectionText2 = forwardRef((props, ref) => {
             ref={ref}
             className="absolute top-[30%] left-1/2 -translate-x-1/2 -translate-y-1/2 text-center w-[80%]"
         >
-            <h2 className="text-3xl md:text-5xl font-sans font-bold text-zinc-800">
+            <h2 className="text-2xl md:text-3xl font-sans font-bold text-zinc-800">
                 Executive Summary
             </h2>
-            <div className="text-lg md:text-xl font-sans mt-4 text-zinc-500 font-medium space-y-4">
+            <div className="text-base md:text-lg font-sans mt-4 text-zinc-500 font-medium space-y-4">
                 <p>
                     In contemporary business environments, technological infrastructure, digital systems, and strategic design are central determinants of operational efficiency, market positioning, and organizational credibility.
                 </p>

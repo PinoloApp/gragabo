@@ -6,11 +6,11 @@ export const SecondSectionText7 = forwardRef((props, ref) => {
             ref={ref}
             className="absolute top-[25%] left-[10%] text-left w-[30%]"
         >
-            <h2 className="text-3xl md:text-5xl font-sans font-black text-white">
+            <h2 className="text-2xl md:text-3xl font-sans font-black text-white">
                 Professional Experience and Case Evidence
             </h2>
 
-            <p className="text-lg md:text-xl font-sans mt-4 text-zinc-300 leading-relaxed border-t-2 border-[#0A6B3B]/20 pt-4">
+            <p className="text-base md:text-lg font-sans mt-4 text-zinc-300 leading-relaxed border-t-2 border-[#0A6B3B]/20 pt-4">
                 Gragabo has supported regulated production businesses and international operations in establishing compliant financial systems, robust legal structures, and effective capital management frameworks.
                 <br /><br />
 

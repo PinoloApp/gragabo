@@ -1,5 +1,5 @@
 'use client'
-import { Environment, OrbitControls } from "@react-three/drei";
+import { Environment, Sky } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { TradeScene } from "./tradeScene";
 import { Loader } from "@react-three/drei";
@@ -10,9 +10,9 @@ export function TradeCanvas() {
             <Canvas
                 shadows
                 dpr={[1, 2]}
-                camera={{ fov: 55, position: [0, 0, 20] }}
+                camera={{ fov: 55, position: [-15.18, 42.67, 4.30] }}
             >
-                <color attach="background" args={['#ffffff']} />
+                <Sky sunPosition={[100, 20, 100]} turbidity={0.1} rayleigh={0.5} />
                 <directionalLight
                     position={[10, 10, 1]}
                     intensity={10}
@@ -27,7 +27,6 @@ export function TradeCanvas() {
                 />
                 <Environment files={"/hdris/metro.hdr"} environmentIntensity={1} background={false} />
                 <TradeScene />
-                <OrbitControls enableZoom={false} enablePan={false} enableRotate={false} />
             </Canvas>
             <Loader />
         </div>

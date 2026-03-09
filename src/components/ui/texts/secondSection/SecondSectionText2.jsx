@@ -6,10 +6,10 @@ export const SecondSectionText2 = forwardRef((props, ref) => {
             ref={ref}
             className="absolute top-[25%] left-[10%] text-left w-[30%]"
         >
-            <h2 className="text-3xl md:text-5xl font-sans font-bold text-zinc-800">
+            <h2 className="text-2xl md:text-3xl font-sans font-bold text-zinc-800">
                 Executive Summary
             </h2>
-            <div className="text-lg md:text-xl font-sans mt-4 text-zinc-500 font-medium space-y-4 border-l-4 border-[#0A6B3B]/30 pl-5">
+            <div className="text-base md:text-lg font-sans mt-4 text-zinc-500 font-medium space-y-4 border-l-4 border-[#0A6B3B]/30 pl-5">
                 <p>
                     As companies expand, financial complexity, legal exposure, and capital allocation risks increase significantly.
                 </p>

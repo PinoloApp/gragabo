@@ -9,17 +9,42 @@ export function Header() {
 
     useEffect(() => {
         const header = document.querySelector(".header");
+        if (!header) return;
 
-        // Smooth sticky header effect
-        const handleScroll = () => {
-            if (window.scrollY > 50) {
-                header?.classList.add("scrolled");
-            } else {
-                header?.classList.remove("scrolled");
+        let lastScrollY = window.scrollY;
+        let ticking = false;
+        const DELTA = 5;
+
+        const updateScroll = () => {
+            const currentScrollY = window.scrollY;
+            const diff = Math.abs(currentScrollY - lastScrollY);
+
+            if (currentScrollY <= 10) {
+                header.classList.remove("scrolled", "hidden-header");
+            } else if (diff > DELTA) {
+                if (currentScrollY > lastScrollY) {
+                    header.classList.add("hidden-header");
+                    header.classList.remove("scrolled");
+                } else {
+                    header.classList.remove("hidden-header");
+                    header.classList.add("scrolled");
+                }
+            }
+
+            lastScrollY = currentScrollY;
+            ticking = false;
+        };
+
+        const onScroll = () => {
+            if (!ticking) {
+                window.requestAnimationFrame(updateScroll);
+                ticking = true;
             }
         };
 
-        window.addEventListener("scroll", handleScroll);
+        updateScroll();
+
+        window.addEventListener("scroll", onScroll, { passive: true });
 
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="/#"]').forEach((anchor) => {
@@ -43,13 +68,20 @@ export function Header() {
         });
 
         return () => {
-            window.removeEventListener("scroll", handleScroll);
+            window.removeEventListener("scroll", onScroll);
         };
     }, [pathname]);
 
     return (
         <header className="header">
             <div className="container header-container">
+                <div className="logo-container">
+                    {pathname !== '/' && (
+                        <a href="/" onClick={(e) => { if (pathname !== '/') { e.preventDefault(); window.location.assign("/"); } }}>
+                            <img src="/images/logoGragaboHeader&Footer.svg" alt="Gragabo Logo" className="header-logo" />
+                        </a>
+                    )}
+                </div>
                 <nav className="nav">
                     <a href="/#home" onClick={(e) => { if (pathname !== '/') { e.preventDefault(); window.location.assign("/#home"); } }}>Home</a>
                     <a href="/about-us">About Us</a>

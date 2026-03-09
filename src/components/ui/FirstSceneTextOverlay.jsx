@@ -170,6 +170,17 @@ export function FirstSceneTextOverlay() {
             9.1 // In: 91% -> 95%
         );
 
+        if (text11.current) {
+            const btn = text11.current.querySelector('.next-scene-btn');
+            if (btn) {
+                timeline.fromTo(btn,
+                    { opacity: 0, y: 30 },
+                    { opacity: 1, y: 0, duration: 0.4 },
+                    9.1 // Starts shortly after Text 11 begins entering
+                );
+            }
+        }
+
         return () => {
             timeline.scrollTrigger?.kill();
             timeline.kill();
@@ -178,20 +189,20 @@ export function FirstSceneTextOverlay() {
     }, [])
 
     return (
-        <div ref={containerRef} className="sticky top-0 h-screen w-full pointer-events-none z-10 p-8 sm:p-20 overflow-hidden opacity-0 invisible">
-
-            <FirstSectionText1 ref={text1} />
-            <FirstSectionText2 ref={text2} />
-            <FirstSectionText3 ref={text3} />
-            <FirstSectionText4 ref={text4} />
-            <FirstSectionText5 ref={text5} />
-            <FirstSectionText6 ref={text6} />
-            <FirstSectionText7 ref={text7} />
-            <FirstSectionText8 ref={text8} />
-            <FirstSectionText9 ref={text9} />
-            <FirstSectionText10 ref={text10} />
-            <FirstSectionText11 ref={text11} />
-
+        <div ref={containerRef} className="sticky top-0 h-screen w-full pointer-events-none z-10 overflow-hidden opacity-0 invisible">
+            <div className="scene-text-overlay relative h-full p-8 sm:p-20">
+                <FirstSectionText1 ref={text1} />
+                <FirstSectionText2 ref={text2} />
+                <FirstSectionText3 ref={text3} />
+                <FirstSectionText4 ref={text4} />
+                <FirstSectionText5 ref={text5} />
+                <FirstSectionText6 ref={text6} />
+                <FirstSectionText7 ref={text7} />
+                <FirstSectionText8 ref={text8} />
+                <FirstSectionText9 ref={text9} />
+                <FirstSectionText10 ref={text10} />
+                <FirstSectionText11 ref={text11} />
+            </div>
         </div>
     )
 }

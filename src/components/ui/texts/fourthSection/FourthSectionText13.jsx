@@ -7,11 +7,11 @@ export const FourthSectionText13 = forwardRef((_props, ref) => {
                 ref={ref}
                 className="max-w-md text-center"
             >
-                <h2 className="text-3xl md:text-5xl font-sans font-black text-black">
+                <h2 className="text-2xl md:text-3xl font-sans font-black text-black">
                     Next Step
                 </h2>
 
-                <p className="text-lg md:text-xl font-sans mt-4 text-zinc-700 italic">
+                <p className="text-base md:text-lg font-sans mt-4 text-zinc-700 italic">
                     If your organization seeks improved digital efficiency, stronger brand authority, and measurable technological and social impact, Gragabo provides a structured pathway to transformation.
                 </p>
 

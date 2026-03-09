@@ -12,7 +12,7 @@ export function ChessCanvas() {
                 dpr={[1, 2]}
                 camera={{ fov: 55, position: [0, 0, 20] }}
             >
-                <color attach="background" args={['#ffffff']} />
+                <color attach="background" args={['#EEF9F0']} />
                 <directionalLight
                     position={[10, 10, 1]}
                     intensity={10}

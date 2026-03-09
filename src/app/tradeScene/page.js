@@ -6,7 +6,7 @@ export default function TradeScenePage() {
     return (
         <>
             <TradeCanvas />
-            <main className="h-[2600vh] w-full relative">
+            <main className="h-[2600vh] w-full relative pointer-events-auto">
                 <ThirdSceneTextOverlay />
                 {/* Prazan prostor za GSAP scroll - on omogućava da animacije ispod i same scene rade na skrol */}
             </main>

@@ -128,52 +128,63 @@ export function ThirdSceneTextOverlay() {
         timeline.fromTo(text8.current,
             { opacity: 0, x: -100 },
             { opacity: 1, x: 0, duration: 0.2 },
-            4.9
+            5.6
         ).to(text8.current, {
             opacity: 0,
             x: 100,
             duration: 0.2
-        }, 5.4);
+        }, 6.1);
 
         // Text 9
         timeline.fromTo(text9.current,
             { opacity: 0, x: -100 },
             { opacity: 1, x: 0, duration: 0.2 },
-            5.6
+            6.3
         ).to(text9.current, {
             opacity: 0,
             x: -100,
             duration: 0.2
-        }, 6.1);
+        }, 6.8);
 
         // Text 10
         timeline.fromTo(text10.current,
             { opacity: 0, y: 100 },
             { opacity: 1, y: 0, duration: 0.2 },
-            6.3
-        ).to(text10.current, {
-            opacity: 0,
-            y: -100,
-            duration: 0.2
-        }, 6.8);
-
-        // Text 11
-        timeline.fromTo(text11.current,
-            { opacity: 0, y: 100 },
-            { opacity: 1, y: 0, duration: 0.2 },
             7.0
-        ).to(text11.current, {
+        ).to(text10.current, {
             opacity: 0,
             y: -100,
             duration: 0.2
         }, 7.5);
 
+        // Text 11
+        timeline.fromTo(text11.current,
+            { opacity: 0, y: 100 },
+            { opacity: 1, y: 0, duration: 0.2 },
+            8.0
+        ).to(text11.current, {
+            opacity: 0,
+            y: -100,
+            duration: 0.2
+        }, 8.5);
+
         // Text 12 - Final 
         timeline.fromTo(text12.current,
             { autoAlpha: 0, x: -100 },
-            { autoAlpha: 1, x: 0, duration: 0.5 },
-            8.4
+            { autoAlpha: 1, x: 0, duration: 1.0 },
+            9.0
         );
+
+        if (text12.current) {
+            const btn = text12.current.querySelector('.next-scene-btn');
+            if (btn) {
+                timeline.fromTo(btn,
+                    { opacity: 0, y: 30 },
+                    { opacity: 1, y: 0, duration: 0.8 },
+                    9.0
+                );
+            }
+        }
 
         return () => {
             timeline.scrollTrigger?.kill();
@@ -183,19 +194,21 @@ export function ThirdSceneTextOverlay() {
     }, [])
 
     return (
-        <div ref={containerRef} className="sticky top-0 h-screen w-full pointer-events-none z-10 p-8 sm:p-20 overflow-hidden opacity-0 invisible">
-            <ThirdSectionText1 ref={text1} />
-            <ThirdSectionText2 ref={text2} />
-            <ThirdSectionText3 ref={text3} />
-            <ThirdSectionText4 ref={text4} />
-            <ThirdSectionText5 ref={text5} />
-            <ThirdSectionText6 ref={text6} />
-            <ThirdSectionText7 ref={text7} />
-            <ThirdSectionText8 ref={text8} />
-            <ThirdSectionText9 ref={text9} />
-            <ThirdSectionText10 ref={text10} />
-            <ThirdSectionText11 ref={text11} />
-            <ThirdSectionText12 ref={text12} />
+        <div ref={containerRef} className="sticky top-0 h-screen w-full pointer-events-none z-10 overflow-hidden opacity-0 invisible">
+            <div className="scene-text-overlay relative h-full p-8 sm:p-20">
+                <ThirdSectionText1 ref={text1} />
+                <ThirdSectionText2 ref={text2} />
+                <ThirdSectionText3 ref={text3} />
+                <ThirdSectionText4 ref={text4} />
+                <ThirdSectionText5 ref={text5} />
+                <ThirdSectionText6 ref={text6} />
+                <ThirdSectionText7 ref={text7} />
+                <ThirdSectionText8 ref={text8} />
+                <ThirdSectionText9 ref={text9} />
+                <ThirdSectionText10 ref={text10} />
+                <ThirdSectionText11 ref={text11} />
+                <ThirdSectionText12 ref={text12} />
+            </div>
         </div>
     )
 }

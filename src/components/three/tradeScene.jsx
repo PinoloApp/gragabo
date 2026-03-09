@@ -1,28 +1,25 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { useRef } from "react";
-import { Trade } from "./modelTrade";
+import { useRef, useEffect } from "react";
+import { AnimatedShip } from "./modelAnimatedShip";
 import { usePathname } from "next/navigation";
-import { useFrame } from "@react-three/fiber";
+import { useThree } from "@react-three/fiber";
+import { ContactShadows } from "@react-three/drei";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export function TradeScene() {
     const pathname = usePathname();
     const tradeRef = useRef();
-    const tradeRotationRef = useRef();
-    const idleRotationRef = useRef();
+    const { camera } = useThree();
 
-    // Initial position for the vast sea of containers
-    const initialPosition = [0, -23, -32];
-
-    useFrame((state, delta) => {
-        // if (idleRotationRef.current) {
-        //     // Very slow, subtle drift for the shipping containers
-        //     idleRotationRef.current.rotation.y += delta * 0.02;
-        // }
-    });
+    useEffect(() => {
+        if (!camera) return;
+        // Frame 1
+        camera.position.set(-15.18, 42.67, 4.30);
+        camera.rotation.set(2.91, 0.05, -3.13);
+    }, [camera]);
 
     useGSAP(() => {
         if (pathname !== '/tradeScene') return;
@@ -32,75 +29,53 @@ export function TradeScene() {
                 trigger: "body",
                 start: "top top",
                 end: "bottom bottom",
-                scrub: true,
+                scrub: 1,
             },
         });
 
-        // 10-second timeline (1 second = 10% page scroll)
-        timeline.to({}, { duration: 10 });
+        // 10 units total duration to stay perfectly synced with ThirdSceneTextOverlay
+        const totalDuration = 10;
+        const frameInterval = 2; // Linear steps for F1-F5 (0 to 8)
+        const finalArrival = 10;   // F6 arrives at 100% scroll
 
-        // Phase 1: Approach (0s - 3s)
-        // Zoom in from a distance and pan slightly over the containers
-        timeline.to(tradeRef.current.position, {
-            z: 12,
-            y: -2,
-            x: 5,
-            duration: 3,
-            ease: "power2.inOut"
-        }, 0);
-        timeline.to(tradeRotationRef.current.rotation, {
-            x: Math.PI * -0.1,
-            y: Math.PI * 0.2,
-            duration: 3,
-            ease: "power2.inOut"
-        }, 0);
+        // Frame 2
+        timeline.to(camera.position, { x: 31.44, y: 38.04, z: -2.32, duration: frameInterval, ease: "none" }, 0);
+        timeline.to(camera.rotation, { x: 2.90, y: 1.07, z: -2.93, duration: frameInterval, ease: "none" }, 0);
 
-        // Phase 2: Deep Dive (3s - 7s)
-        // Fly directly over/through the maze of containers, rotating to look down
-        timeline.to(tradeRef.current.position, {
-            z: 25,
-            y: 0,
-            x: -2,
-            duration: 4,
-            ease: "none"
-        }, 3);
-        timeline.to(tradeRotationRef.current.rotation, {
-            x: Math.PI * 0.1,
-            y: Math.PI * -0.5,
-            duration: 4,
-            ease: "none"
-        }, 3);
+        // Frame 3
+        timeline.to(camera.position, { x: 32.16, y: 11.69, z: 5.56, duration: frameInterval, ease: "none" }, frameInterval);
+        timeline.to(camera.rotation, { x: 2.90, y: 1.07, z: -2.93, duration: frameInterval, ease: "none" }, frameInterval);
 
-        // Phase 3: Exit (7s - 10s)
-        // Accelerate extremely fast past the final containers out of view
-        timeline.to(tradeRef.current.position, {
-            z: 40,
-            y: 3,
-            x: -15,
-            duration: 3,
-            ease: "power2.in"
-        }, 7);
-        timeline.to(tradeRotationRef.current.rotation, {
-            x: Math.PI * 0.5,
-            y: Math.PI * -1.0,
-            duration: 3,
-            ease: "power2.in"
-        }, 7);
+        // Frame 4
+        timeline.to(camera.position, { x: 27.23, y: 4.20, z: -8.67, duration: frameInterval, ease: "none" }, frameInterval * 2);
+        timeline.to(camera.rotation, { x: 1.09, y: 1.42, z: -1.09, duration: frameInterval, ease: "none" }, frameInterval * 2);
+
+        // Frame 5
+        timeline.to(camera.position, { x: -1.29, y: 7.97, z: -10.62, duration: frameInterval, ease: "none" }, frameInterval * 3);
+        timeline.to(camera.rotation, { x: 1.09, y: 1.42, z: -1.09, duration: frameInterval, ease: "none" }, frameInterval * 3);
+
+        // Frame 6 (Arrives at 10.0 with cinematic ease)
+        timeline.to(camera.position, {
+            x: -85.81, y: 6.92, z: 15.82,
+            duration: finalArrival - (frameInterval * 4),
+            ease: "power4.inOut"
+        }, frameInterval * 4);
+        timeline.to(camera.rotation, {
+            x: 2.83, y: -1.20, z: 2.85,
+            duration: finalArrival - (frameInterval * 4),
+            ease: "power4.inOut"
+        }, frameInterval * 4);
 
         return () => {
             timeline.scrollTrigger?.kill();
             timeline.kill();
         };
-
-    }, [pathname]);
+    }, [pathname, camera]);
 
     return (
-        <group ref={tradeRef} position={initialPosition} scale={1.5}>
-            <group ref={tradeRotationRef} rotation={[0, -21, 0]}>
-                <group ref={idleRotationRef}>
-                    <Trade />
-                </group>
-            </group>
+        <group ref={tradeRef} position={[0, 0, 0]} rotation={[0, 0, 0]} scale={1.5}>
+            <ContactShadows position={[0, -0.035, 0]} opacity={0.65} scale={80} blur={2.5} far={10} resolution={1024} color="#000000" />
+            <AnimatedShip position={[0, 0, 0]} scale={5} />
         </group>
     );
 }

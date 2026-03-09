@@ -4,12 +4,12 @@ export const ThirdSectionText2 = forwardRef((props, ref) => {
     return (
         <div
             ref={ref}
-            className="absolute top-[30%] left-1/2 -translate-x-1/2 -translate-y-1/2 text-center w-[70%]"
+            className="absolute top-[20%] left-[10%] text-left w-[50%]"
         >
-            <h2 className="text-3xl md:text-5xl font-sans font-bold text-zinc-800">
+            <h2 className="text-2xl md:text-3xl font-sans font-bold text-black">
                 Executive Summary
             </h2>
-            <div className="text-lg md:text-xl font-sans mt-4 text-zinc-500 font-medium space-y-4 border-l-4 border-[#0A6B3B]/30 pl-5">
+            <div className="text-base md:text-lg font-sans mt-4 text-zinc-700 font-medium space-y-4 border-l-4 border-[#BEA05D]/30 pl-5">
                 <p>
                     In global trade and industrial production, profitability is determined not only by product quality but by supply chain precision, contractual security, cost control, and operational discipline.
                 </p>
@@ -31,4 +31,6 @@ export const ThirdSectionText2 = forwardRef((props, ref) => {
 });
 
 ThirdSectionText2.displayName = 'ThirdSectionText2';
+
+
 
