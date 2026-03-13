@@ -18,8 +18,15 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ffffff;
+    /* Forced white to prevent black overscroll views */
+    --foreground: #171717;
+    /* Keep text legible if not explicitly styled elsewhere */
+  }
+
+  html,
+  body {
+    color-scheme: light !important;
   }
 }
 
@@ -27,6 +34,9 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .scene-text-overlay {
@@ -56,8 +66,22 @@ body {
     opacity: 0;
     transform: translateY(2rem);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Global mobile resets */
+@media (max-width: 768px) {
+  .scene-text-overlay {
+    zoom: 0.85;
+  }
+}
+
+@media (max-width: 480px) {
+  .scene-text-overlay {
+    zoom: 0.7;
   }
 }

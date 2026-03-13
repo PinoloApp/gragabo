@@ -1,5 +1,5 @@
 'use client'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
@@ -37,164 +37,198 @@ export function SecondSceneTextOverlay() {
     useGSAP(() => {
         gsap.to(containerRef.current, { autoAlpha: 1, duration: 0.5 });
 
-        const timeline = gsap.timeline({
-            scrollTrigger: {
-                trigger: "body",
-                start: "top top",
-                end: "bottom bottom",
-                scrub: true,
+        let mm = gsap.matchMedia();
+
+        mm.add({
+            isDesktop: "(min-width: 768px)",
+            isMobile: "(max-width: 767px)",
+        }, (context) => {
+            let { isMobile } = context.conditions;
+
+            const timeline = gsap.timeline({
+                scrollTrigger: {
+                    trigger: "body",
+                    start: "top top",
+                    end: "bottom bottom",
+                    scrub: true,
+                }
+            });
+
+            // 10 "seconds" = 100% scroll depth
+            timeline.to({}, { duration: 10 });
+
+            // Text 1
+            timeline.to(text1.current, {
+                opacity: 0,
+                y: -50,
+                duration: 0.2
+            }, 0.5);
+
+            // Text 2
+            timeline.fromTo(text2.current,
+                { opacity: 0, y: 100 },
+                { opacity: 1, y: 0, duration: 0.2 },
+                0.7
+            ).to(text2.current, {
+                opacity: 0,
+                y: -100,
+                duration: 0.2
+            }, 1.2);
+
+            // Text 3
+            timeline.fromTo(text3.current,
+                { opacity: 0, y: 100 },
+                { opacity: 1, y: 0, duration: 0.2 },
+                1.4
+            ).to(text3.current, {
+                opacity: 0,
+                y: -100,
+                duration: 0.2
+            }, 1.9);
+
+            // Text 4
+            timeline.fromTo(text4.current,
+                { opacity: 0, y: 100 },
+                { opacity: 1, y: 0, duration: 0.2 },
+                2.1
+            ).to(text4.current, {
+                opacity: 0,
+                y: -100,
+                duration: 0.2
+            }, 2.6);
+
+            // Text 5
+            timeline.fromTo(text5.current,
+                { opacity: 0, y: 100 },
+                { opacity: 1, y: 0, duration: 0.2 },
+                2.8
+            ).to(text5.current, {
+                opacity: 0,
+                y: -100,
+                duration: 0.2
+            }, 3.3);
+
+            // Text 6
+            timeline.fromTo(text6.current,
+                { opacity: 0, y: 100 },
+                { opacity: 1, y: 0, duration: 0.4 },
+                3.5
+            ).to(text6.current, {
+                opacity: 0,
+                y: -100,
+                duration: 0.2
+            }, 4.0);
+
+            // Text 7
+            timeline.fromTo(text7.current,
+                { opacity: 0, y: 100 },
+                { opacity: 1, y: 0, duration: 0.3 },
+                5.2
+            ).to(text7.current, {
+                opacity: 0,
+                y: -100,
+                duration: 0.3
+            }, 5.7);
+
+            // Text 8
+            timeline.fromTo(text8.current,
+                { opacity: 0, x: 100 },
+                { opacity: 1, x: 0, duration: 0.3 },
+                6.2
+            ).to(text8.current, {
+                opacity: 0,
+                x: -100,
+                duration: 0.3
+            }, 6.7);
+
+            // Text 9
+            timeline.fromTo(text9.current,
+                { opacity: 0, x: 100 },
+                { opacity: 1, x: 0, duration: 0.3 },
+                7.2
+            ).to(text9.current, {
+                opacity: 0,
+                x: -100,
+                duration: 0.3
+            }, 7.7);
+
+            // Text 10
+            timeline.fromTo(text10.current,
+                { opacity: 0, x: 100 },
+                { opacity: 1, x: 0, duration: 0.3 },
+                8.2
+            ).to(text10.current, {
+                opacity: 0,
+                x: -100,
+                duration: 0.3
+            }, 8.7);
+
+            // Text 11
+            timeline.fromTo(text11.current,
+                { opacity: 0, y: 100 },
+                { opacity: 1, y: 0, duration: 0.3 },
+                9.2
+            )
+
+            if (text11.current) {
+                const btn = text11.current.querySelector('.next-scene-btn');
+                if (btn) {
+                    timeline.fromTo(btn,
+                        { opacity: 0, y: 30 },
+                        { opacity: 1, y: 0, duration: 0.4 },
+                        9.2 // Starts shortly after Text 11 begins entering
+                    );
+                }
             }
+
+            return () => {
+                timeline.scrollTrigger?.kill();
+                timeline.kill();
+            };
         });
 
-        // 10 "seconds" = 100% scroll depth
-        timeline.to({}, { duration: 10 });
-
-        // Text 1
-        timeline.to(text1.current, {
-            opacity: 0,
-            y: -50,
-            duration: 0.2
-        }, 0.5);
-
-        // Text 2
-        timeline.fromTo(text2.current,
-            { opacity: 0, y: 100 },
-            { opacity: 1, y: 0, duration: 0.2 },
-            0.7
-        ).to(text2.current, {
-            opacity: 0,
-            y: -100,
-            duration: 0.2
-        }, 1.2);
-
-        // Text 3
-        timeline.fromTo(text3.current,
-            { opacity: 0, y: 100 },
-            { opacity: 1, y: 0, duration: 0.2 },
-            1.4
-        ).to(text3.current, {
-            opacity: 0,
-            y: -100,
-            duration: 0.2
-        }, 1.9);
-
-        // Text 4
-        timeline.fromTo(text4.current,
-            { opacity: 0, y: 100 },
-            { opacity: 1, y: 0, duration: 0.2 },
-            2.1
-        ).to(text4.current, {
-            opacity: 0,
-            y: -100,
-            duration: 0.2
-        }, 2.6);
-
-        // Text 5
-        timeline.fromTo(text5.current,
-            { opacity: 0, y: 100 },
-            { opacity: 1, y: 0, duration: 0.2 },
-            2.8
-        ).to(text5.current, {
-            opacity: 0,
-            y: -100,
-            duration: 0.2
-        }, 3.3);
-
-        // Text 6
-        timeline.fromTo(text6.current,
-            { opacity: 0, y: 100 },
-            { opacity: 1, y: 0, duration: 0.4 },
-            3.5
-        ).to(text6.current, {
-            opacity: 0,
-            y: -100,
-            duration: 0.2
-        }, 4.0);
-
-        // Text 7
-        timeline.fromTo(text7.current,
-            { opacity: 0, y: 100 },
-            { opacity: 1, y: 0, duration: 0.3 },
-            5.2
-        ).to(text7.current, {
-            opacity: 0,
-            y: -100,
-            duration: 0.3
-        }, 5.7);
-
-        // Text 8
-        timeline.fromTo(text8.current,
-            { opacity: 0, x: 100 },
-            { opacity: 1, x: 0, duration: 0.3 },
-            6.2
-        ).to(text8.current, {
-            opacity: 0,
-            x: -100,
-            duration: 0.3
-        }, 6.7);
-
-        // Text 9
-        timeline.fromTo(text9.current,
-            { opacity: 0, x: 100 },
-            { opacity: 1, x: 0, duration: 0.3 },
-            7.2
-        ).to(text9.current, {
-            opacity: 0,
-            x: -100,
-            duration: 0.3
-        }, 7.7);
-
-        // Text 10
-        timeline.fromTo(text10.current,
-            { opacity: 0, x: 100 },
-            { opacity: 1, x: 0, duration: 0.3 },
-            8.2
-        ).to(text10.current, {
-            opacity: 0,
-            x: -100,
-            duration: 0.3
-        }, 8.7);
-
-        // Text 11
-        timeline.fromTo(text11.current,
-            { opacity: 0, y: 100 },
-            { opacity: 1, y: 0, duration: 0.3 },
-            9.2
-        )
-
-        if (text11.current) {
-            const btn = text11.current.querySelector('.next-scene-btn');
-            if (btn) {
-                timeline.fromTo(btn,
-                    { opacity: 0, y: 30 },
-                    { opacity: 1, y: 0, duration: 0.4 },
-                    9.2 // Starts shortly after Text 11 begins entering
-                );
-            }
-        }
-
-        return () => {
-            timeline.scrollTrigger?.kill();
-            timeline.kill();
-        };
+        return () => mm.revert();
 
     }, [])
 
     return (
         <div ref={containerRef} className="sticky top-0 h-screen w-full pointer-events-none z-10 overflow-hidden opacity-0 invisible">
             <div className="scene-text-overlay relative h-full p-8 sm:p-20">
-                <SecondSectionText1 ref={text1} />
-                <SecondSectionText2 ref={text2} />
-                <SecondSectionText3 ref={text3} />
-                <SecondSectionText4 ref={text4} />
-                <SecondSectionText5 ref={text5} />
-                <SecondSectionText6 ref={text6} />
-                <SecondSectionText7 ref={text7} />
-                <SecondSectionText8 ref={text8} />
-                <SecondSectionText9 ref={text9} />
-                <SecondSectionText10 ref={text10} />
-                <SecondSectionText11 ref={text11} />
+                {/* We need to pass isMobile to children, so we'll use a local state or just get it from matchMedia again if needed, 
+                    but within this component's render we can't easily access the mm context. 
+                    Actually, we can use a state for isMobile. */}
+                <MobileStateWrapper text1={text1} text2={text2} text3={text3} text4={text4} text5={text5} text6={text6} text7={text7} text8={text8} text9={text9} text10={text10} text11={text11} />
             </div>
         </div>
     )
+}
+
+function MobileStateWrapper({ text1, text2, text3, text4, text5, text6, text7, text8, text9, text10, text11 }) {
+    const [isMobile, setIsMobile] = useState(false);
+    
+    useGSAP(() => {
+        let mm = gsap.matchMedia();
+        mm.add({
+            isMobile: "(max-width: 767px)",
+        }, (context) => {
+            setIsMobile(context.conditions.isMobile);
+        });
+        return () => mm.revert();
+    }, []);
+
+    return (
+        <>
+            <SecondSectionText1 ref={text1} isMobile={isMobile} />
+            <SecondSectionText2 ref={text2} isMobile={isMobile} />
+            <SecondSectionText3 ref={text3} isMobile={isMobile} />
+            <SecondSectionText4 ref={text4} isMobile={isMobile} />
+            <SecondSectionText5 ref={text5} isMobile={isMobile} />
+            <SecondSectionText6 ref={text6} isMobile={isMobile} />
+            <SecondSectionText7 ref={text7} isMobile={isMobile} />
+            <SecondSectionText8 ref={text8} isMobile={isMobile} />
+            <SecondSectionText9 ref={text9} isMobile={isMobile} />
+            <SecondSectionText10 ref={text10} isMobile={isMobile} />
+            <SecondSectionText11 ref={text11} isMobile={isMobile} />
+        </>
+    );
 }

@@ -1,20 +1,22 @@
 import { forwardRef } from 'react';
 
-export const ThirdSectionText9 = forwardRef((props, ref) => {
+export const ThirdSectionText9 = forwardRef(({ isMobile, ...props }, ref) => {
     return (
         <div
             ref={ref}
-            className="absolute top-[16%] right-8 md:right-24 max-w-sm text-left"
+            className={isMobile
+                ? "absolute top-[35%] right-[5%] mx-auto w-[50vw] text-left"
+                : "absolute top-[20%] right-8 md:right-24 max-w-sm text-left"}
         >
-            <h2 className="text-2xl md:text-3xl font-sans font-black text-black">
+            <h2 className={`font-sans font-black text-black ${isMobile ? "text-lg" : "text-2xl md:text-3xl"}`}>
                 Engagement Methodology
             </h2>
 
-            <p className="text-base md:text-lg font-sans mt-4 text-zinc-700 font-medium">
+            <p className={`font-sans mt-4 text-zinc-700 font-medium ${isMobile ? "text-xs" : "text-base md:text-lg"}`}>
                 Our advisory process is structured and execution-oriented.
                 <br /><br />
 
-                Trade and Operations Diagnostics
+                Phase One:
                 <br /><br />
 
                 Comprehensive evaluation of supply chain, logistics costs, contractual exposure, and operational systems.

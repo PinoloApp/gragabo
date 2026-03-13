@@ -1,5 +1,5 @@
 'use client'
-import { useRef } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
@@ -31,6 +31,17 @@ export function FirstSceneTextOverlay() {
     const text9 = useRef()
     const text10 = useRef()
     const text11 = useRef()
+
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const mq = window.matchMedia("(max-width: 768px)");
+        setIsMobile(mq.matches);
+        const handler = (e) => setIsMobile(e.matches);
+        mq.addEventListener("change", handler);
+
+        return () => mq.removeEventListener("change", handler);
+    }, []);
 
     useGSAP(() => {
         // Prikazuje ceo kontejner tek kada je GSAP spreman da izračuna pozicije tekstova
@@ -191,17 +202,17 @@ export function FirstSceneTextOverlay() {
     return (
         <div ref={containerRef} className="sticky top-0 h-screen w-full pointer-events-none z-10 overflow-hidden opacity-0 invisible">
             <div className="scene-text-overlay relative h-full p-8 sm:p-20">
-                <FirstSectionText1 ref={text1} />
-                <FirstSectionText2 ref={text2} />
-                <FirstSectionText3 ref={text3} />
-                <FirstSectionText4 ref={text4} />
-                <FirstSectionText5 ref={text5} />
-                <FirstSectionText6 ref={text6} />
-                <FirstSectionText7 ref={text7} />
-                <FirstSectionText8 ref={text8} />
-                <FirstSectionText9 ref={text9} />
-                <FirstSectionText10 ref={text10} />
-                <FirstSectionText11 ref={text11} />
+                <FirstSectionText1 ref={text1} isMobile={isMobile} />
+                <FirstSectionText2 ref={text2} isMobile={isMobile} />
+                <FirstSectionText3 ref={text3} isMobile={isMobile} />
+                <FirstSectionText4 ref={text4} isMobile={isMobile} />
+                <FirstSectionText5 ref={text5} isMobile={isMobile} />
+                <FirstSectionText6 ref={text6} isMobile={isMobile} />
+                <FirstSectionText7 ref={text7} isMobile={isMobile} />
+                <FirstSectionText8 ref={text8} isMobile={isMobile} />
+                <FirstSectionText9 ref={text9} isMobile={isMobile} />
+                <FirstSectionText10 ref={text10} isMobile={isMobile} />
+                <FirstSectionText11 ref={text11} isMobile={isMobile} />
             </div>
         </div>
     )

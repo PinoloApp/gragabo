@@ -1,5 +1,5 @@
-<svg width="828" height="570" viewBox="-120 0 1028 570" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<rect y="410" width="828" height="160" fill="url(#pattern0_1146_1263)"/>
+<svg width="828" height="570" viewBox="-100 0 1028 570" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect y="410" width="828" height="160" fill="url(#pattern0_1146_1263)" class="gragabo-text"/>
 <style>
 .levitate-group {
     animation: levitate 3s ease-in-out infinite;
@@ -192,6 +192,15 @@
     0%, 81% { opacity: 0; transform: translateX(0); }
     84%, 95% { opacity: 1; transform: translateX(-12px); } /* dot-4 je left label */
     100% { opacity: 0; transform: translateX(0); }
+}
+
+/* Mobile: scale down GRAGABO text */
+@media (max-width: 768px) {
+    .gragabo-text {
+        transform: scale(0.7);
+        transform-origin: center;
+        transform-box: fill-box;
+    }
 }
 </style>
 <g class="dot-wrapper">

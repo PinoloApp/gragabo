@@ -1,15 +1,17 @@
 import { forwardRef } from 'react';
 
-export const ThirdSectionText2 = forwardRef((props, ref) => {
+export const ThirdSectionText2 = forwardRef(({ isMobile, ...props }, ref) => {
     return (
         <div
             ref={ref}
-            className="absolute top-[20%] left-[10%] text-left w-[50%]"
+            className={isMobile
+                ? "absolute top-[10%] left-0 right-0 mx-auto w-[85vw] text-center"
+                : "absolute top-[20%] left-[10%] text-left w-[50%]"}
         >
-            <h2 className="text-2xl md:text-3xl font-sans font-bold text-black">
+            <h2 className={`font-sans font-black text-black ${isMobile ? "text-lg" : "text-2xl md:text-3xl"}`}>
                 Executive Summary
             </h2>
-            <div className="text-base md:text-lg font-sans mt-4 text-zinc-700 font-medium space-y-4 border-l-4 border-[#BEA05D]/30 pl-5">
+            <div className={`text-base md:text-lg font-sans mt-4 text-zinc-700 font-medium space-y-4 border-l-4 border-[#BEA05D]/30 pl-5 ${isMobile ? "text-xs space-y-2 text-left" : ""}`}>
                 <p>
                     In global trade and industrial production, profitability is determined not only by product quality but by supply chain precision, contractual security, cost control, and operational discipline.
                 </p>

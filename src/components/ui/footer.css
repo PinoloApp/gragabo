@@ -107,3 +107,137 @@
     color: rgba(255, 255, 255, 0.7);
     font-size: 0.95rem;
 }
+
+/* ==========================================
+   FOOTER RESPONSIVE
+   ========================================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .footer {
+        padding: 80px 0 30px;
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        margin-bottom: 50px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .footer {
+        padding: 60px 0 24px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 36px;
+        margin-bottom: 40px;
+        padding: 0 24px;
+    }
+
+    /* Brand (1st child): order 1 */
+    .footer-container > :nth-child(1) {
+        order: 1;
+    }
+
+    /* Quick Links (2nd child): order 2 */
+    .footer-container > :nth-child(2) {
+        order: 2;
+    }
+
+    /* Follow Us (3rd child): order 4 (last) */
+    .footer-container > :nth-child(3) {
+        order: 4;
+    }
+
+    /* Legal (4th child): order 3 (after Quick Links) */
+    .footer-container > :nth-child(4) {
+        order: 3;
+    }
+
+    .footer-brand {
+        text-align: left;
+    }
+
+    .footer-brand p {
+        max-width: 100%;
+    }
+
+    .footer-logo {
+        height: 44px;
+        margin: 0 0 16px;
+    }
+
+    .footer-links h3,
+    .footer-social h3 {
+        font-size: 1.1rem;
+        margin-bottom: 18px;
+    }
+
+    .footer-social {
+        text-align: left;
+    }
+
+    .social-icons {
+        justify-content: flex-start;
+    }
+
+    .footer-bottom {
+        text-align: left;
+        padding-top: 24px;
+        font-size: 0.85rem;
+    }
+
+    .footer-bottom p {
+        padding: 0 16px;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+    .footer {
+        padding: 50px 0 20px;
+    }
+
+    .footer-container {
+        gap: 30px;
+        padding: 0 20px;
+        margin-bottom: 30px;
+    }
+
+    .footer-logo {
+        height: 38px;
+    }
+
+    .footer-brand p {
+        font-size: 0.9rem;
+        line-height: 1.7;
+    }
+
+    .footer-links h3,
+    .footer-social h3 {
+        font-size: 1rem;
+        margin-bottom: 16px;
+    }
+
+    .footer-links ul li {
+        margin-bottom: 12px;
+    }
+
+    .footer-links ul li a {
+        font-size: 0.9rem;
+    }
+
+    .social-icons a {
+        width: 40px;
+        height: 40px;
+        font-size: 0.8rem;
+    }
+
+    .footer-bottom {
+        font-size: 0.8rem;
+    }
+}

@@ -648,6 +648,42 @@
 
 /* ─── Responsive ─────────────────────────────────────────────────── */
 @media (max-width: 768px) {
+    .gn-page {
+        overflow-x: hidden;
+        width: 100%;
+        max-width: 100vw;
+    }
+
+    .gn-diagram-section {
+        padding: 60px 16px;
+    }
+
+    .gn-diagram {
+        aspect-ratio: 4 / 5;
+        /* Make the diagram taller on mobile to spread out nodes vertically */
+        max-width: 100%;
+    }
+
+    .gn-node-dot {
+        width: 16px;
+        height: 16px;
+    }
+
+    .gn-node--core .gn-node-dot {
+        width: 28px;
+        height: 28px;
+    }
+
+    .gn-node-label {
+        font-size: 0.6rem;
+        max-width: 80px;
+        line-height: 1.3;
+    }
+
+    .gn-node {
+        width: 100px;
+        /* Force small bounds to wrap tight on mobile */
+    }
 
     .gn-content-section,
     .gn-quiet-section,
@@ -655,6 +691,8 @@
     .gn-cta-section,
     .gn-final-section {
         padding: 72px 24px;
+        max-width: 100vw;
+        box-sizing: border-box;
     }
 
     .gn-quiet-mantra {
@@ -672,5 +710,21 @@
 
     .gn-impact-list {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .gn-diagram-section {
+        padding: 40px 10px;
+    }
+
+    .gn-diagram {
+        aspect-ratio: 3 / 6;
+        /* Even taller for super narrow phones */
+    }
+
+    .gn-node-label {
+        font-size: 0.55rem;
+        max-width: 70px;
     }
 }

@@ -1,16 +1,18 @@
 import { forwardRef } from 'react';
 
-export const SecondSectionText9 = forwardRef((props, ref) => {
+export const SecondSectionText9 = forwardRef(({ isMobile, ...props }, ref) => {
     return (
         <div
             ref={ref}
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center w-[30%]"
+            className={isMobile
+                ? "absolute top-[60%] left-0 right-0 mx-auto w-[85vw] text-center"
+                : "absolute top-[40%] left-0 right-0 mx-auto text-center w-[30%]"}
         >
-            <h2 className="text-2xl md:text-3xl font-sans font-black text-white">
-                <span className="text-[#0A6B3B] font-normal text-lg block mb-2">Phase Two:</span>Structural Optimization
+            <h2 className={`font-sans font-black ${isMobile ? "text-xl text-black" : "text-2xl md:text-3xl text-white"}`}>
+                <span className={`text-[#0A6B3B] font-normal block mb-2 ${isMobile ? "text-base" : "text-lg"}`}>Phase Two:</span>Structural Optimization
             </h2>
 
-            <p className="text-base md:text-lg font-sans mt-4 text-zinc-400 font-medium">
+            <p className={`font-sans mt-4 font-medium ${isMobile ? "text-xs text-zinc-700" : "text-base md:text-lg text-zinc-300"}`}>
                 Design and implementation of integrated financial, legal, and governance frameworks.
             </p>
         </div>

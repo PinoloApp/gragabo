@@ -1,6 +1,5 @@
 :root {
     --primary-color: #CBA354;
-    /* Zlatna boja preuzeta sa logotipa */
     --primary-hover: #b08d47;
     --text-dark: #333333;
     --text-light: #ffffff;
@@ -10,8 +9,6 @@
     --font-main: 'Courier Prime', monospace;
     --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
-
-
 
 .home-wrapper {
     font-family: var(--font-main);
@@ -36,11 +33,10 @@
     padding: 0 24px;
 }
 
-
-
 /* Hero sekcija - Logotip na bazi celog ekrana */
 .home-wrapper .hero {
-    height: 100vh;
+    height: 100vh; /* Reverted to simple vh, overriden by JS inline height */
+    /* Wait, the inline style overrides anyway */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -93,8 +89,6 @@
     transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-
-
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -107,9 +101,7 @@
     }
 }
 
-
-
-/* Indikator skrola (Mišic) */
+/* Indikator skrola */
 .home-wrapper .scroll-indicator {
     position: absolute;
     bottom: 40px;
@@ -171,7 +163,7 @@
     }
 }
 
-/* Sekcija za demonstraciju skrola */
+/* Placeholder section */
 .home-wrapper .placeholder-section {
     padding: 120px 0;
     text-align: center;
@@ -196,14 +188,104 @@
     margin: 0 auto;
 }
 
+/* ==========================================
+   HOME RESPONSIVE
+   ========================================== */
 
-
-@media (max-width: 768px) {
-    .home-wrapper .placeholder-section h2 {
-        font-size: 2.2rem;
+/* Tablet */
+@media (max-width: 1024px) {
+    .home-wrapper .hero-content {
+        padding: 0 8%;
     }
 
     .home-wrapper .main-logo {
         max-width: 85%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .home-wrapper .hero-content {
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .home-wrapper .main-logo {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        max-height: 95vh;
+        transform: scale(1.5);
+        transform-origin: center center;
+        filter: drop-shadow(0 12px 24px rgba(203, 163, 84, 0.12));
+    }
+
+    .home-wrapper .scroll-indicator {
+        bottom: 30px;
+    }
+
+    .home-wrapper .hover-text {
+        font-size: 0.75rem;
+        letter-spacing: 1.5px;
+    }
+
+    .home-wrapper .placeholder-section {
+        padding: 80px 0;
+        min-height: 40vh;
+    }
+
+    .home-wrapper .placeholder-section h2 {
+        font-size: 2.2rem;
+    }
+
+    .home-wrapper .placeholder-section p {
+        font-size: 1.1rem;
+        padding: 0 24px;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+    .home-wrapper .hero-content {
+        padding: 0;
+    }
+
+    .home-wrapper .main-logo {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        max-height: 95vh;
+        transform: scale(1.6);
+        transform-origin: center center;
+        filter: drop-shadow(0 8px 16px rgba(203, 163, 84, 0.1));
+    }
+
+    .home-wrapper .scroll-indicator {
+        bottom: 24px;
+    }
+
+    .home-wrapper .hover-text {
+        font-size: 0.7rem;
+        letter-spacing: 1.2px;
+    }
+
+    .home-wrapper .hover-text::before {
+        width: 5px;
+        height: 5px;
+    }
+
+    .home-wrapper .placeholder-section {
+        padding: 60px 0;
+    }
+
+    .home-wrapper .placeholder-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .home-wrapper .placeholder-section p {
+        font-size: 1rem;
+        padding: 0 20px;
     }
 }
