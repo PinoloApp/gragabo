@@ -1,10 +1,6 @@
-"use client";
-
 import { SecondSceneTextOverlay } from "@/components/ui/SecondSceneTextOverlay";
-import dynamic from "next/dynamic";
+import { ScrollCanvas } from "@/components/three/scrollCanvas";
 import { Footer } from "@/components/ui/Footer";
-
-const ScrollCanvas = dynamic(() => import("@/components/three/scrollCanvas").then(mod => mod.ScrollCanvas), { ssr: false });
 
 export default function FinanceScene() {
     return (
