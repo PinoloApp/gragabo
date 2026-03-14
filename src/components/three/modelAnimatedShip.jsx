@@ -5,7 +5,7 @@ Command: npx gltfjsx@6.5.3 public/models/animatedShip.glb
 
 import React, { useRef, useMemo } from 'react'
 import { useGLTF, useAnimations } from '@react-three/drei'
-import { useFrame, useLoader } from '@react-three/fiber'
+import { useFrame, useLoader, useThree } from '@react-three/fiber'
 import * as THREE from 'three'
 import { Water } from 'three-stdlib'
 
