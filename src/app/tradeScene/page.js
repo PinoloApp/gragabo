@@ -1,3 +1,5 @@
+"use client";
+
 import { ThirdSceneTextOverlay } from "@/components/ui/ThirdSceneTextOverlay";
 import dynamic from "next/dynamic";
 import { Footer } from "@/components/ui/Footer";
