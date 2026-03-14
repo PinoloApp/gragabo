@@ -11,7 +11,6 @@ import { Water } from 'three-stdlib'
 
 function OceanShader({ position, scale }) {
   const ref = useRef()
-  const gl = useMemo(() => new THREE.WebGLRenderer(), [])
   const waterNormals = useLoader(THREE.TextureLoader, '/textures/waternormals.jpg')
   waterNormals.wrapS = waterNormals.wrapT = THREE.RepeatWrapping
 
@@ -27,9 +26,8 @@ function OceanShader({ position, scale }) {
       waterColor: 0x001e0f,
       distortionScale: 3.7,
       fog: false,
-      format: gl.outputColorSpace
     }
-  ), [waterNormals, waterGeo, gl])
+  ), [waterNormals, waterGeo])
 
   useFrame((state, delta) => {
     water.material.uniforms.time.value += delta * 0.5

@@ -1,6 +1,8 @@
 import { TechnologySceneTextOverlay } from "@/components/ui/TechnologySceneTextOverlay";
-import { TechnologyCanvas } from "@/components/three/technologyCanvas";
+import dynamic from "next/dynamic";
 import { Footer } from "@/components/ui/Footer";
+
+const TechnologyCanvas = dynamic(() => import("@/components/three/technologyCanvas").then(mod => mod.TechnologyCanvas), { ssr: false });
 
 export default function TechnologyScenePage() {
     return (

@@ -1,6 +1,8 @@
 import { ThirdSceneTextOverlay } from "@/components/ui/ThirdSceneTextOverlay";
-import { TradeCanvas } from "@/components/three/tradeCanvas";
+import dynamic from "next/dynamic";
 import { Footer } from "@/components/ui/Footer";
+
+const TradeCanvas = dynamic(() => import("@/components/three/tradeCanvas").then(mod => mod.TradeCanvas), { ssr: false });
 
 export default function TradeScenePage() {
     return (

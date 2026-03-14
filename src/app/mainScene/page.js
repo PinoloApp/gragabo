@@ -1,6 +1,8 @@
 import { FirstSceneTextOverlay } from "@/components/ui/FirstSceneTextOverlay";
-import { ChessCanvas } from "@/components/three/chessCanvas";
+import dynamic from "next/dynamic";
 import { Footer } from "@/components/ui/Footer";
+
+const ChessCanvas = dynamic(() => import("@/components/three/chessCanvas").then(mod => mod.ChessCanvas), { ssr: false });
 
 export default function MainScene() {
     return (
