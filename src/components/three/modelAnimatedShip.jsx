@@ -5,13 +5,13 @@ Command: npx gltfjsx@6.5.3 public/models/animatedShip.glb
 
 import React, { useRef, useMemo } from 'react'
 import { useGLTF, useAnimations } from '@react-three/drei'
-import { useFrame, useLoader, useThree } from '@react-three/fiber'
+import { useFrame, useLoader } from '@react-three/fiber'
 import * as THREE from 'three'
 import { Water } from 'three-stdlib'
 
 function OceanShader({ position, scale }) {
   const ref = useRef()
-  const { gl } = useThree()
+  const gl = useMemo(() => new THREE.WebGLRenderer(), [])
   const waterNormals = useLoader(THREE.TextureLoader, '/textures/waternormals.jpg')
   waterNormals.wrapS = waterNormals.wrapT = THREE.RepeatWrapping
 

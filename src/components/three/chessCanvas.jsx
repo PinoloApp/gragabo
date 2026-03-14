@@ -1,19 +1,10 @@
-"use client";
-
+'use client'
 import { Environment, OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { ChessScene } from "./chessScene";
 import { Loader } from "@react-three/drei";
-import { useState, useEffect } from "react";
 
 export function ChessCanvas() {
-    const [mounted, setMounted] = useState(false);
-
-    useEffect(() => {
-        setMounted(true);
-    }, []);
-
-    if (!mounted) return null;
     return (
         <div className="fixed inset-0 -z-10 w-full h-full pointer-events-auto">
             <Canvas
@@ -21,7 +12,7 @@ export function ChessCanvas() {
                 dpr={[1, 2]}
                 camera={{ fov: 55, position: [0, 0, 20] }}
             >
-                <color attach="background" args={['#EEF9F0']} />
+                <color attach="background" args={['#F8FFF9']} />
                 <directionalLight
                     position={[10, 10, 1]}
                     intensity={10}

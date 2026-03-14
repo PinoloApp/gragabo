@@ -201,37 +201,143 @@
         transform-origin: center;
         transform-box: fill-box;
     }
+
+    /* Hide desktop cursor tutorial on mobile */
+    .svg-tutorial-cursor,
+    .svg-tutorial-ping {
+        display: none !important;
+    }
+
+    /* Disable desktop one-shot tutorial animations on mobile */
+    .tutorial-dot-scale-1,
+    .tutorial-dot-scale-2 {
+        animation: none !important;
+    }
+    .tutorial-text-fade-1,
+    .tutorial-text-fade-2 {
+        animation: none !important;
+    }
+
+    /* ── Mobile auto-cycle: 10s loop, ~2.5s per dot ── */
+
+    /* Dot 1 — Business (right label) — active 0%-20% */
+    .mobile-cycle-dot-1 {
+        animation: mCycleDot1 24s infinite cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+        transform-origin: center;
+        transform-box: fill-box;
+    }
+    .mobile-cycle-text-1 {
+        animation: mCycleTextR1 24s infinite cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+    }
+
+    /* Dot 2 — Finance (right label) — active 25%-45% */
+    .mobile-cycle-dot-2 {
+        animation: mCycleDot2 24s infinite cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+        transform-origin: center;
+        transform-box: fill-box;
+    }
+    .mobile-cycle-text-2 {
+        animation: mCycleTextR2 24s infinite cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+    }
+
+    /* Dot 3 — Trade (left label) — active 50%-70% */
+    .mobile-cycle-dot-3 {
+        animation: mCycleDot3 24s infinite cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+        transform-origin: center;
+        transform-box: fill-box;
+    }
+    .mobile-cycle-text-3 {
+        animation: mCycleTextL3 24s infinite cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+    }
+
+    /* Dot 4 — Technology (left label) — active 75%-95% */
+    .mobile-cycle-dot-4 {
+        animation: mCycleDot4 24s infinite cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+        transform-origin: center;
+        transform-box: fill-box;
+    }
+    .mobile-cycle-text-4 {
+        animation: mCycleTextL4 24s infinite cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+    }
+
+}
+
+/* ── Mobile auto-cycle keyframes (outside media query for broad compat) ── */
+
+/* Dot scale keyframes — each dot highlights during its 20% window */
+/* 24s total: ~10s of dot activity (first ~42%), then ~14s pause */
+@keyframes mCycleDot1 {
+    0%, 1% { transform: scale(1); fill: #BEA05D; }
+    2%, 8% { transform: scale(1.4); fill: #d3b46f; }
+    10%, 100% { transform: scale(1); fill: #BEA05D; }
+}
+@keyframes mCycleDot2 {
+    0%, 11% { transform: scale(1); fill: #BEA05D; }
+    13%, 19% { transform: scale(1.4); fill: #d3b46f; }
+    21%, 100% { transform: scale(1); fill: #BEA05D; }
+}
+@keyframes mCycleDot3 {
+    0%, 22% { transform: scale(1); fill: #BEA05D; }
+    24%, 30% { transform: scale(1.4); fill: #d3b46f; }
+    32%, 100% { transform: scale(1); fill: #BEA05D; }
+}
+@keyframes mCycleDot4 {
+    0%, 33% { transform: scale(1); fill: #BEA05D; }
+    35%, 41% { transform: scale(1.4); fill: #d3b46f; }
+    43%, 100% { transform: scale(1); fill: #BEA05D; }
+}
+
+/* Text fade keyframes — right labels translateX(12px), left labels translateX(-12px) */
+@keyframes mCycleTextR1 {
+    0%, 1% { opacity: 0; transform: translateX(0); }
+    2%, 8% { opacity: 1; transform: translateX(12px); }
+    10%, 100% { opacity: 0; transform: translateX(0); }
+}
+@keyframes mCycleTextR2 {
+    0%, 11% { opacity: 0; transform: translateX(0); }
+    13%, 19% { opacity: 1; transform: translateX(12px); }
+    21%, 100% { opacity: 0; transform: translateX(0); }
+}
+@keyframes mCycleTextL3 {
+    0%, 22% { opacity: 0; transform: translateX(0); }
+    24%, 30% { opacity: 1; transform: translateX(-12px); }
+    32%, 100% { opacity: 0; transform: translateX(0); }
+}
+@keyframes mCycleTextL4 {
+    0%, 33% { opacity: 0; transform: translateX(0); }
+    35%, 41% { opacity: 1; transform: translateX(-12px); }
+    43%, 100% { opacity: 0; transform: translateX(0); }
 }
 </style>
 <g class="dot-wrapper">
     <a href="/mainScene" target="_top" style="cursor: pointer;">
         <g class="levitate-group dot-1">
-            <rect x="396" y="53" width="34" height="34" rx="17" fill="#BEA05D" class="dot"/>
-            <text x="445" y="70" class="dot-label-right">Business, Strategy &amp; Governance</text>
+            <rect x="396" y="53" width="34" height="34" rx="17" fill="#BEA05D" class="dot mobile-cycle-dot-1"/>
+            <text x="445" y="70" class="dot-label-right mobile-cycle-text-1"><tspan x="445" dy="0">Business, Strategy</tspan><tspan x="445" dy="18">&amp; Governance</tspan></text>
         </g>
     </a>
 </g>
 <g class="dot-wrapper">
     <a href="/financeScene" target="_top" style="cursor: pointer;">
         <g class="levitate-group dot-2">
-            <rect x="333" y="112" width="34" height="34" rx="17" fill="#BEA05D" class="dot tutorial-dot-scale-1"/>
-            <text x="382" y="129" class="dot-label-right tutorial-text-fade-1">Finance, Legal &amp; Capital</text>
+            <rect x="333" y="112" width="34" height="34" rx="17" fill="#BEA05D" class="dot tutorial-dot-scale-1 mobile-cycle-dot-2"/>
+            <text x="382" y="129" class="dot-label-right tutorial-text-fade-1 mobile-cycle-text-2">Finance, Legal &amp; Capital</text>
         </g>
     </a>
 </g>
 <g class="dot-wrapper">
     <a href="/tradeScene" target="_top" style="cursor: pointer;">
         <g class="levitate-group dot-3">
-            <rect x="302" y="197" width="34" height="34" rx="17" fill="#BEA05D" class="dot"/>
-            <text x="287" y="214" class="dot-label-left">Trade, Logistics &amp; Industrial Systems</text>
+            <rect x="302" y="197" width="34" height="34" rx="17" fill="#BEA05D" class="dot mobile-cycle-dot-3"/>
+            <text x="287" y="214" class="dot-label-left mobile-cycle-text-3"><tspan x="287" dy="0">Trade, Logistics</tspan><tspan x="287" dy="18">&amp; Industrial Systems</tspan></text>
         </g>
     </a>
 </g>
 <g class="dot-wrapper">
     <a href="/technologyScene" target="_top" style="cursor: pointer;">
         <g class="levitate-group dot-4">
-            <rect x="333" y="280" width="34" height="34" rx="17" fill="#BEA05D" class="dot tutorial-dot-scale-2"/>
-            <text x="318" y="297" class="dot-label-left tutorial-text-fade-2">Technology, Design &amp; Impact Services</text>
+            <rect x="333" y="280" width="34" height="34" rx="17" fill="#BEA05D" class="dot tutorial-dot-scale-2 mobile-cycle-dot-4"/>
+            <text x="318" y="297" class="dot-label-left tutorial-text-fade-2 mobile-cycle-text-4"><tspan x="318" dy="0">Technology, Design</tspan><tspan x="318" dy="18">&amp; Impact Services</tspan></text>
         </g>
     </a>
 </g>

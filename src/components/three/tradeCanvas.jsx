@@ -1,19 +1,10 @@
-"use client";
-
+'use client'
 import { Environment, Sky } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { TradeScene } from "./tradeScene";
 import { Loader } from "@react-three/drei";
-import { useState, useEffect } from "react";
 
 export function TradeCanvas() {
-    const [mounted, setMounted] = useState(false);
-
-    useEffect(() => {
-        setMounted(true);
-    }, []);
-
-    if (!mounted) return null;
     return (
         <div className="fixed inset-0 -z-10 w-full h-full pointer-events-auto">
             <Canvas

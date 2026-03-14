@@ -1,10 +1,12 @@
 import { ThirdSceneTextOverlay } from "@/components/ui/ThirdSceneTextOverlay";
 import { TradeCanvas } from "@/components/three/tradeCanvas";
 import { Footer } from "@/components/ui/Footer";
+import { SceneLoadingScreen } from "@/components/ui/SceneLoadingScreen";
 
 export default function TradeScenePage() {
     return (
         <>
+            <SceneLoadingScreen />
             <TradeCanvas />
             <main className="h-[2600vh] w-full relative pointer-events-auto">
                 <ThirdSceneTextOverlay />
